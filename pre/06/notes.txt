@@ -1,0 +1,2 @@
+If I remember correctly, I had some trouble with this chapter and figuring out how to make the loops do what I want them to do. I got more familiar with the for loop which
+was the source of a lot of confusion sophmore year. 
