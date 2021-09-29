@@ -1,1 +1,1 @@
-A lot of the work that I did here reminded me of the Python projects I did in Annual CS. Especially the way I did math with variables, imported necessary 
+A lot of the work that I did here reminded me of the Python projects I did in Annual CS. Especially the way I did math with variables and imported Random.
