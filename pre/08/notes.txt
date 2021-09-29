@@ -1,0 +1,2 @@
+The exercises on coding bat weren't too difficult having finished all of the other exercises. 
+In some cases, the logic on how to compute the answer to a exercise was more difficult and time-consuming but overall it wasn't too bad.
