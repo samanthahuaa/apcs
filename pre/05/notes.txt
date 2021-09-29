@@ -1,0 +1,2 @@
+It was satisfying to see a lot of things that I had learned in previous chapters come together here.
+It wasn't too difficult because of the way we learned the syntax for each component one at a time.
