@@ -1,5 +1,8 @@
 public class Greet {
 	public static void main(String [] args) {
-		System.out.println("No hablo queso");
+		void greet(String);
+	}
+	public static void {
+		System.out.print("Hello World");
 	}
 }
