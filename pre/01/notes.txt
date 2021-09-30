@@ -1,0 +1,1 @@
+At first, it was confusing to me how to use Powershell. It was satifsying to see the "Hello World" appear on the screen at the end though.

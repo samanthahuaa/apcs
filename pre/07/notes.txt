@@ -1,0 +1,1 @@
+Needing to specify the type of information that would be stored in the array was new to me. I frequently forgot to add that piece of information while creating arrays.

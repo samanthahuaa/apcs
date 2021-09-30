@@ -1,0 +1,1 @@
+This was very similar to what I learned about Python in Annual CS. The syntax was similar too.
