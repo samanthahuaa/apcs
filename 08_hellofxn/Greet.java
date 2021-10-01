@@ -6,6 +6,6 @@ public class Greet {
 	}
 	public static void greet(String a){
 		// System.out.print("Hello World");
-		System.out.print("Hello there "+a+", nice to meet you!");
+		System.out.println("Hello there "+a+", nice to meet you!");
 	}
 }
