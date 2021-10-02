@@ -6,6 +6,6 @@ public class BigSib {
 	}
 
 	public static void BigSib(String name) {
-		System.out.println("Hello name! I'm Poppy (not poopy)");
+		System.out.println("Hello "+name+"! I'm Poppy (not poopy)");
 	}
 }
