@@ -1,7 +1,7 @@
 public class Greet {
 	public static void main(String[] args) {
-		BigSib("Flim");
-		BigSib("Flam");
-		BigSib("Kazaam");
+		BigSib.greet("Flim");
+		BigSib.greet("Flam");
+		BigSib.greet("Kazaam");
 	}
 }
