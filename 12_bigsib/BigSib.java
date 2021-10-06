@@ -1,6 +1,6 @@
 public class BigSib {
-  public static String setHelloMsg(String a) {
-    return a;
+  public static void setHelloMsg(String a) {
+    System.out.print(a);
   }
   
   public static String greet( String a) {
