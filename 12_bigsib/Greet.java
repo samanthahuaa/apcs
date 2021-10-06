@@ -1,5 +1,5 @@
 /*
-Flaming Hot Cheetos (Perry (Salaj Jr.), Courtney (Timothy), Samantha (me) (Poppy)
+Frogs on Fire (FOF) Andrew and Samantha (me)
 APCS
 HW12 -- Passing methods into other classes + Utilizing return statements in methods + new function
 2021-10-05
@@ -13,6 +13,8 @@ What is the new function good for? In what situations would it be better to use 
 */
 
 public class Greet {
+  String helloMsg;
+  
   public static void main( String[] args ) {
     String greeting;
 
