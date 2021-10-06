@@ -1,12 +1,9 @@
 public class Greet {
-  public BigSib() {
-    helloMsg = "Word up";
-  }
   
   public static void main( String[] args ) {
     String greeting;
 
-    BigSib richard = new BigSib();
+    BigSib richard = new BigSib("Word up");
 //     richard.setHelloMsg("Word up");
 
     greeting = richard.greet("freshman");
