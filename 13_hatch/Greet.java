@@ -1,5 +1,5 @@
 public class Greet {
-  public BigSib {
+  public BigSib() {
     helloMsg = "Word up";
   }
   
