@@ -1,3 +1,8 @@
+/*
+Flaming Hot Cheetos (Perry (Salaj Jr.), Courtney (Timothy), Samantha (me) (Poppy)
+
+*/
+
 public class Greet {
   public static void main( String[] args ) {
     String greeting;
