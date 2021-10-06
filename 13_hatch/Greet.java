@@ -1,6 +1,6 @@
 public class Greet {
   public BigSib {
-    
+    helloMsg = "Word up";
   }
   
   public static void main( String[] args ) {
