@@ -1,5 +1,5 @@
 public class BigSib {
   public static String greet( String a) {
-    return a+"Salutations Dr. Spaceman \n Hey ya Kong Fooey \n Sup mom";
+    return a+"\nSalutations Dr. Spaceman \nHey ya Kong Fooey \nSup mom";
   }
 }
