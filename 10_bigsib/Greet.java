@@ -1,5 +1,5 @@
 /*
-Samantha Hua
+Flaming Hot Cheetos (Perry (Salaj Jr.), Courtney (Timothy), Samantha (me) (Poppy)
 APCS
 HW10 -- Methods that return values that can be used by other methods
 2021-10-4
