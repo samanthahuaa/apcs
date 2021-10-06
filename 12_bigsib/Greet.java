@@ -12,9 +12,7 @@ QCC
 What is the new function good for? In what situations would it be better to use new rather than the actual file itself?
 */
 
-public class Greet {
-  String helloMsg;
-  
+public class Greet {  
   public static void main( String[] args ) {
     String greeting;
 
