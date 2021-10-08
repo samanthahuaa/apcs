@@ -5,6 +5,6 @@ public class BigSib {
   }
   
   public String greet(String a) {
-    return boop + a;
+    return boop + " " + a;
   }
 }
