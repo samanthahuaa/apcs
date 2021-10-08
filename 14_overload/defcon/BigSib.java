@@ -7,7 +7,7 @@ HW14 -- Using Different Types of Constructors
 
 /*
 Discoveries:
-If you do not pass any parameters into the constructor, you can not customize the constructor's actions.
+If you do not pass any parameters into the constructor (you use a default constructor), you can not customize the constructor's actions.
 QCC:
 None at the moment.
 */
