@@ -1,6 +1,6 @@
 public class BigSib {
   String boop;
-  public BigSib {
+  public BigSib() {
     boop = "Why hello";
   }
   
