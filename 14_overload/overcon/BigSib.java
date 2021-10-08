@@ -4,7 +4,7 @@ public class BigSib {
     boop = a;
   }
   
-  public static String greet(String b) {
+  public String greet(String b) {
     return boop + " " + b;
   }
 }
