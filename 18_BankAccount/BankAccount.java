@@ -1,10 +1,10 @@
 public class BankAccount {
 	private String holderName;
 	private String password;
-	private short PIN;
+	private int PIN;
 	private int accNum;
 	private float balance;
-	public BankAccount(String n, String p, short pin, int accNumber, float b) {
+	public BankAccount(String n, String p, int pin, int accNumber, float b) {
 		setName(n);
 		setPass(p);
 		setPIN(pin);
@@ -18,7 +18,7 @@ public class BankAccount {
 	private void setPass (String pass) {
 		password = pass;
 	}
-	private void setPIN (short p) {
+	private void setPIN (int p) {
 		PIN = p;
 	}
 	private void setAccNum (int num) {
@@ -49,7 +49,7 @@ public class BankAccount {
 	}
 
 	public static void main(String[] args) {
-		BankAccount joseph = new BankAccount("joseph","password",(short) 1234, 123456789, 1000000);	
+		BankAccount joseph = new BankAccount("joseph","password", 1234, 123456789, 1000000);	
 		joseph.printInfo();
 		joseph.deposit(1000000);
 		joseph.withdraw(1);
