@@ -21,6 +21,8 @@ public class Greet {
 
     greeting = richard.greet("freshman");
     System.out.println(greeting);
+    // Below is testing
+    System.out.print(richard);
 
   } //end main()
 } //end Greet
