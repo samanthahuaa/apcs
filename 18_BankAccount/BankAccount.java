@@ -68,10 +68,12 @@ public class BankAccount {
 
 	public static void main(String[] args) {
 		BankAccount joseph = new BankAccount("joseph","password", 1234, 123456789, 1000000);
+
 		joseph.printInfo();
 		joseph.deposit(1000000);
+		joseph.printInfo();
 		joseph.withdraw(1);
-
+		joseph.printInfo();
 	}
 
 }
