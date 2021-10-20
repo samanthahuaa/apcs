@@ -1,4 +1,28 @@
 /*
+Quad Puffs -- David Deng / Yat long Chan / Samantha Hua / Lindsay Phung
+APCS
+HW20 -- External Audit/ Test other group's BankAccount in a different class
+2021-10-19
+
+DISCO
+- You can only access private variables and methods within the class they are created in.
+  - One way around this issue is to create public methods that call upon the private variables/methods
+
+QCC
+  ON TARGET TRIO CODE: 
+  - toString() or method to print/return account info is needed.
+
+  - We aren't able to check account info because there is no toString() or print/return info method that we can run to avoid calling the instance variables directly. Instance vars are private so we can't access them in this class.
+
+  - Authenticate method only tests to see whether the values inputted match the instance of BankAccount named myCopyDuck instead of the account information provided for each individual instance. People wouldn't be able to authenticate themselves if they don't know the info of myCopyDuck and if they DO know the info of myCopyDuck, they can authenticate themselves into any instance and mess stuff up.
+
+  - The return type for WithdrawMoney() should be boolean and not void.
+
+  - Suggestive edit: There should also be a mutator for each individual variable instead of setting all the variables in one method. This makes it so that you don't have to set each inst var everytime you want to change a specific var.
+*/
+ 
+/*
+TARGET TRIO FILE:
 Trio number int x (Orion Roven(Von Geburt), May Qiu(Perry Jr.), Lawrence Joa(Steve, John))
 APCS
 HW19 -- Mo Money Mo Problems ...MORE AWESOME
