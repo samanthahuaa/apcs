@@ -4,7 +4,7 @@ public class test {
 		System.out.println(Math.round(d));
 		long l = Math.round(d);
 		System.out.println(Math.round(l));
-		i = Math.round(l);
+		int i = Math.round(l);
 		System.out.println(i);
 	}
 }
