@@ -120,9 +120,9 @@ public class Coin {
    * Returns "heads" or "tails"
    ***/
   public String flip() {
-	double probability = Math.random()*bias;
+	double probability = 2*Math.random()*bias;
 	System.out.println(probability);
-	if(bias >= 0.5){
+	if(probability >= 0.5){
 		headsCtr += 1;
 		upFace = "heads";
 	}
