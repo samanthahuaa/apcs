@@ -21,7 +21,7 @@ public class Coin {
    *  postcond:
    ***/
   public Coin() {
-	
+	upFace = "heads";
   }
 
 
