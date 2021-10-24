@@ -23,6 +23,7 @@ public class Driver {
 	System.out.println(mine.toString());
       //test 1st overloaded constructor
       Coin yours = new Coin( "quarter" );
+	  System.out.println(yours.toString());
       //test 2nd overloaded constructor
 	/*===================TOP==========================
       Coin wayne = new Coin( "dollar", "heads" );
