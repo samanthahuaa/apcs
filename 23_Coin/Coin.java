@@ -152,7 +152,7 @@ public class Coin {
    * postcond: Return String comprised of name and current face
    ***/
   public String toString() {
-	return this.name + name + " -- " + upFace;
+	return this.name + ": " + name + " -- " + upFace;
   }
 
 }//end class
