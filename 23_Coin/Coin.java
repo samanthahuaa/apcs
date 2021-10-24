@@ -52,6 +52,7 @@ public class Coin {
   public Coin( String s, String nowFace ) {
 	name = s;
 	upFace = nowFace;
+	bias = 0.5;
   }
 
 /* in order to compile our code 
