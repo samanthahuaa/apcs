@@ -40,6 +40,7 @@ public class Coin {
   public Coin( String s ) {
 	name = s;
 	upFace = "heads";
+	bias = 0.5;
   }
 
 
