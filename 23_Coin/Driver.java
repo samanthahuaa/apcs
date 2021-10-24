@@ -37,7 +37,7 @@ public class Driver {
 	  
       System.out.println("yours: " + yours);
       System.out.println("wayne: " + wayne);
-	  /*===================TOP==========================
+	  
       //test equals() method
       if ( yours.equals(wayne) ) {
         System.out.println( "Matchee matchee!" );
@@ -45,6 +45,7 @@ public class Driver {
       else {
         System.out.println( "No match. Firestarter you can not be." );
       }
+	  /*===================TOP==========================
       ====================BOTTOM======================*/
 
   }//end main()
