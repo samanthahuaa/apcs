@@ -34,9 +34,10 @@ public class Driver {
       System.out.println("\nAfter flipping...");
       yours.flip();
       wayne.flip();
-	  /*===================TOP==========================
+	  
       System.out.println("yours: " + yours);
       System.out.println("wayne: " + wayne);
+	  /*===================TOP==========================
       //test equals() method
       if ( yours.equals(wayne) ) {
         System.out.println( "Matchee matchee!" );
