@@ -25,8 +25,9 @@ public class Driver {
       Coin yours = new Coin( "quarter" );
 	  System.out.println(yours.toString());
       //test 2nd overloaded constructor
-	/*===================TOP==========================
       Coin wayne = new Coin( "dollar", "heads" );
+	  System.out.println(wayne.toString());
+	  /*===================TOP==========================
       //test toString() methods of each Coin
       System.out.println("mine: " + mine);
       System.out.println("yours: " + yours);
