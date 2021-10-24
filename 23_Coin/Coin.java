@@ -22,6 +22,7 @@ public class Coin {
    ***/
   public Coin() {
 	upFace = "heads";
+	bias = 0.5;
   }
 
 
