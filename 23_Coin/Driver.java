@@ -29,11 +29,12 @@ public class Driver {
       System.out.println("mine: " + mine);
       System.out.println("yours: " + yours);
       System.out.println("wayne: " + wayne);
-	  /*===================TOP==========================
+	
       //test flip() method
       System.out.println("\nAfter flipping...");
       yours.flip();
       wayne.flip();
+	  /*===================TOP==========================
       System.out.println("yours: " + yours);
       System.out.println("wayne: " + wayne);
       //test equals() method
