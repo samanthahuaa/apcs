@@ -20,18 +20,16 @@ public class Driver {
     //test default constructor
     
       Coin mine = new Coin();
-	System.out.println(mine.toString());
       //test 1st overloaded constructor
       Coin yours = new Coin( "quarter" );
-	  System.out.println(yours.toString());
       //test 2nd overloaded constructor
       Coin wayne = new Coin( "dollar", "heads" );
-	  System.out.println(wayne.toString());
-	  /*===================TOP==========================
+	  
       //test toString() methods of each Coin
       System.out.println("mine: " + mine);
       System.out.println("yours: " + yours);
       System.out.println("wayne: " + wayne);
+	  /*===================TOP==========================
       //test flip() method
       System.out.println("\nAfter flipping...");
       yours.flip();
