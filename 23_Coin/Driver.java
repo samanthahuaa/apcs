@@ -20,27 +20,35 @@ QCC
 - Does "Coin other" as an input refer to another object? How do we know which Object it is referring to? How can it reference an instance of a Class inside an instance of the same Class?
 */
 
-/***
-    driver for class Coin
-    ~~~ SUGGESTED WORKFLOW: ~~~
-    1. Compile this file and run. Note anything notable.
-    2. Move the "TOP" line down, so that it is below the first statement.
-    (emacs: with cursor at beginning of TOP line, C-k C-k, DOWN, DOWN, C-y)
-    (your editor: ???)
-    3. Compile and run again.
-    4. Resolve errors one at a time until it works.
-    5. Repeat 2-4 until TOP meets BOTTOM.
-***/
-
-public class Driver {
-
+public class Driver { 
   public static void main( String[] args ) {
-
+	  Coin bob = new Coin();
+	Coin natasha = new Coin();
+	  int x = 100;
+	  int y = 120;
+	  int totalHeads = 0;
+	  int matchCounter = 0;
+	  while(totalHeads < x || matchCounter < y || matchCounter < 65536 || matchCounter%2005 != 0){
+		  if(bob.flip() == "heads"){
+			  totalHeads += 1;
+		  }
+		  if(natasha.flip() == "heads"){
+			  totalHeads += 1;
+		  }
+		  if(bob.equals(natasha)){
+			  matchCounter += 1;
+		  }
+	  }
+	  System.out.println("Success!");
+	  System.out.println("The total amount of heads was: " + totalHeads);
+	  System.out.println("The total number of matches was: " + matchCounter);
+	  
+	  
+	  
     //build Objects from blueprint specified by class Coin
 
-
     //test default constructor
-    
+    /*
       Coin mine = new Coin();
       //test 1st overloaded constructor
       Coin yours = new Coin( "quarter" );
@@ -67,8 +75,7 @@ public class Driver {
       else {
         System.out.println( "No match. Firestarter you can not be." );
       }
-	  /*===================TOP==========================
-      ====================BOTTOM======================*/
+	  */
 
   }//end main()
 
