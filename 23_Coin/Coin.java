@@ -43,8 +43,7 @@ public class Coin {
    *  postcond:
    ***/
   public Coin() {
-	upFace = "heads";
-	bias = 0.5;
+	reset("heads", 0.5);
   }
 
 
@@ -128,7 +127,11 @@ public class Coin {
       postcond: Coin's attribs reset to starting vals
   ***/
   public void reset( String s, double d ) {
-
+	flipCtr = 0;
+	tailsCtr = 0;
+	headsCtr = 0;
+	upFace = s;
+	bias = d;
   }
 
 
