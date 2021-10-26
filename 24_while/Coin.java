@@ -4,6 +4,7 @@ APCS
 HW24 -- Get It While You Can
 2021-10-25
 time spent: 0.5 hour
+
 DISCO
 - We can use || to ensure that the while loop continues to run if one of the conditionals is false.
 - Creating counter variables are helpful for referencing that data and for creating boolean expressions with that data.
@@ -11,12 +12,15 @@ DISCO
 - If you use a method in a conditional, it runs the method (ex: bob.flip() in our while loop ran bob.flip when we compared it to "heads" in the if statement)
 - If y is less than 65536, "matchCounter % 2005 == 0" is the determining boolean expression in terms of how many matching iterations are needed to complete the while loop.
 - When we ran Driver multiple times, we noticed that for the same values of x and y, there were the same number of matches but not the exact same number of heads. 
+
 QCC
 - When do we need to use "this"? What are some examples where it would be useful? 
 - Can we pass in parameters to the main() method?
 - Would it be more beneficial to have a helper method to complete the series of coin pair flips? We decided to put everything in the main method for simplicity.
+
 POST-v0 MODS
 - We wrote + utilized the reset() method to streamline our code.
+
 */
 
 public class Coin {
