@@ -4,7 +4,6 @@ APCS
 HW23 -- What Does Equality Look Like?
 2021-10-23
 time spent: 0.7 hour
-
 DISCO
 - We should read ahead before we start coding in order to minimize confusion. 
 (For the toString() method we were trying to complete tasks that we are not capable of doing given the things we have learned in class.)
@@ -12,7 +11,6 @@ DISCO
 - We realized we needed to set upFace to heads in all of the constructors in order for our code to behave the way we wanted it to.
 - If bias does not have a value set in the constructor, its value will automatically be 0 meaning that the probability of the coin flipping to heads would be 0 regardless of what Math.random() is.
 - If Math.random()*bias is not multiplied by two, the probability of the coin flipping to heads would still be 0. This is because the max value for Math.random() is 0.999 so when multiplied by 0.5(the value we set for bias), probability will never reach 0.5.
-
 QCC
 - Is it possible to call upon an object's name?
 	ex: ClassName ObjectName = new ClassName(); a function that would return ObjectName
@@ -43,7 +41,8 @@ public class Coin {
    *  postcond:
    ***/
   public Coin() {
-	reset("heads", 0.5);
+	upFace = "heads";
+	bias = 0.5;
   }
 
 
@@ -127,11 +126,7 @@ public class Coin {
       postcond: Coin's attribs reset to starting vals
   ***/
   public void reset( String s, double d ) {
-	flipCtr = 0;
-	tailsCtr = 0;
-	headsCtr = 0;
-	upFace = s;
-	bias = d;
+
   }
 
 
