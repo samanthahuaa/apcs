@@ -1,21 +1,26 @@
 /*
 Square Roots (Samantha Hua and Ruiwen (Raven) Tang)
 APCS
-HW23 -- What Does Equality Look Like?
-2021-10-23
-time spent: 0.7 hour
+HW24 -- Get It While You Can
+2021-10-25
+time spent: 0.5 hour
+
 DISCO
-- We should read ahead before we start coding in order to minimize confusion. 
-(For the toString() method we were trying to complete tasks that we are not capable of doing given the things we have learned in class.)
-- Even though we didn't use "this," we learned that it is used by an object to reference itself.
-- We realized we needed to set upFace to heads in all of the constructors in order for our code to behave the way we wanted it to.
-- If bias does not have a value set in the constructor, its value will automatically be 0 meaning that the probability of the coin flipping to heads would be 0 regardless of what Math.random() is.
-- If Math.random()*bias is not multiplied by two, the probability of the coin flipping to heads would still be 0. This is because the max value for Math.random() is 0.999 so when multiplied by 0.5(the value we set for bias), probability will never reach 0.5.
+- We can use || to ensure that the while loop continues to run if one of the conditionals is false.
+- Creating counter variables are helpful for referencing that data and for creating boolean expressions with that data.
+- We can pass Objects into methods (ex: our equals() method called upon natasha)
+- If you use a method in a conditional, it runs the method (ex: bob.flip() in our while loop ran bob.flip when we compared it to "heads" in the if statement)
+- If y is less than 65536, "matchCounter % 2005 == 0" is the determining boolean expression in terms of how many matching iterations are needed to complete the while loop.
+- When we ran Driver multiple times, we noticed that for the same values of x and y, there were the same number of matches but not the exact same number of heads. 
+
 QCC
-- Is it possible to call upon an object's name?
-	ex: ClassName ObjectName = new ClassName(); a function that would return ObjectName
-- Is there a more organized way to determine probability using bias? (especially when there are more than 2 options to choose from)
-- Does "Coin other" as an input refer to another object? How do we know which Object it is referring to? How can it reference an instance of a Class inside an instance of the same Class?
+- When do we need to use "this"? What are some examples where it would be useful? 
+- Can we pass in parameters to the main() method?
+- Would it be more beneficial to have a helper method to complete the series of coin pair flips? We decided to put everything in the main method for simplicity.
+
+POST-v0 MODS
+- We wrote + utilized the reset() method to streamline our code.
+
 */
 
 public class Driver { 
