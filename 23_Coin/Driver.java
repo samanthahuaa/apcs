@@ -24,7 +24,7 @@ public class Driver {
   public static void main( String[] args ) {
 	  Coin bob = new Coin();
 	Coin natasha = new Coin();
-	  int x = 100000;
+	  int x = 100000000;
 	  int y = 1;
 	  int totalHeads = 0;
 	  int matchCounter = 0;
