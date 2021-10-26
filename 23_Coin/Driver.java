@@ -39,7 +39,9 @@ public class Driver {
 			  matchCounter += 1;
 		  }
 	  }
+	  int totalFlips = bob.flipCtr + natasha.flipCtr;
 	  System.out.println("Success!");
+	  System.out.println("The total number of flips was: " + totalFlips);
 	  System.out.println("The total amount of heads was: " + totalHeads);
 	  System.out.println("The total number of matches was: " + matchCounter);
 	  
