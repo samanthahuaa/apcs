@@ -8,7 +8,6 @@ public class Repeater {
   public static String fenceW(int numPosts) {
     int counter = 0;
     String fence = "|";
-    return fence;
     if (numPosts != 1) {
       while (counter < numPosts) {
         fence += "--|";
