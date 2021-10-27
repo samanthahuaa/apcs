@@ -12,9 +12,34 @@ DISCO
 QCC
 - Which is better to prioritize: readable and easy to understand code or more efficient code?
 */
-
 public class Repeater {
-  public static void main(String[] args){
+  //while loop method
+  public static String fenceW(int numPosts) {
+    int count = 0;
+    String fence = "";
+
+    while (count < numPosts) {
+      count++;
+      if (count == 1) {
+        fence += "|";
+      } else {
+        fence += "--|";
+      }
+    }
+    return fence;
+  }
+  //recursive method
+  public static String fenceR(int numPosts) {
+    String fence = "";
+    if (numPosts == 1) {
+      fence += "|";
+      return fence;
+    } 
+    fence += "|--";
+    return fence + fenceR(numPosts - 1);
+  }
+
+  public static void main(String[] args) {
     System.out.println("===while loop testing===");
     System.out.println(fenceW(1));
     System.out.println(fenceW(2));
@@ -25,27 +50,14 @@ public class Repeater {
     System.out.println(fenceR(2));
     System.out.println(fenceR(3));
   }
-  
-  public static String fenceW(int numPosts) {
-    int counter = 1;
-    String fence = "|";
-    while (counter < numPosts) {
-      fence += "--|";
-      counter++;
-    }
-    return fence;
-  }
-  
-  public static String fenceR(int numPosts) {
-    String fence = "";
-    if (numPosts == 1) {
-      fence += "|";
-      return fence;
-    } else {
-      fence += "|--";
-      return fence + fenceR(numPosts-1);
-    }
-    
-  }
-    
 }
+
+//   public static String fenceW(int numPosts) {
+//     int counter = 1;
+//     String fence = "|";
+//     while (counter < numPosts) {
+//       fence += "--|";
+//       counter++;
+//     }
+//     return fence;
+//   }
