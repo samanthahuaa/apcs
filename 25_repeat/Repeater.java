@@ -10,7 +10,7 @@ public class Repeater {
     String fence = "|";
     return fence;
     if (numPosts == 1) {
-      
+      break;
     } else {
       while (counter < numPosts) {
         fence += "--|";
