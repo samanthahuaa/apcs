@@ -22,6 +22,17 @@ public class Repeater {
     return fence;
   }
   
-//   public static String 
+  public static String fenceR(int numPosts) {
+    if (numPosts == 1) {
+      fence += "|"
+      return fence;
+    } else {
+      fence += "|--";
+      
+      fenceR(numPosts-1);
+      return fence;
+    }
+    
+  }
     
 }
