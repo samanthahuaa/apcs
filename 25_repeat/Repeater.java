@@ -1,6 +1,6 @@
 public class Repeater {
   public static void main(String[] args){
-    System.out.println(fenceW(5);)
+    System.out.println(fenceW(5));
   }
   
   public static String fenceW(int numPosts) {
