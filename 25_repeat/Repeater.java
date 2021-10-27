@@ -1,8 +1,11 @@
 public class Repeater {
   public static void main(String[] args){
-    fenceW(1);
-    fenceW(2);
-    fenceW(5);
+    System.out.println(fenceW(1);)
+//     System.out.println();
+    System.out.println(fenceW(2));
+    System.out.println(fenceW(5));
+    
+    
   }
   
   public static String fenceW(int numPosts) {
