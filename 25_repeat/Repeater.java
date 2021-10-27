@@ -1,16 +1,20 @@
 public class Repeater {
   public static void main(String[] args){
-    System.out.println(fenceW(5));
+    fenceW(1);
+    fenceW(2);
+    fenceW(5);
   }
   
   public static String fenceW(int numPosts) {
     int counter = 0;
-    String fence = "";
+    String fence = "|";
     return fence;
-//     if (numPosts == 1) {
-//       return 
-//     while (counter < numPosts) {
-      
-//     }
+    if (numPosts == 1) {
+      return fence;
+    }
+    while (counter < numPosts) {
+      fence += "--|";
+      counter++;
+    }
   }
 }
