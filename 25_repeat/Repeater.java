@@ -33,7 +33,7 @@ public class Repeater {
       return fence;
     } else {
       fence += "|--";
-      return fence + fenceR(numPosts-1);;
+      return fence + fenceR(numPosts-1);
     }
     
   }
