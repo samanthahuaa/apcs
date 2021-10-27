@@ -9,7 +9,7 @@ public class Repeater {
   }
   
   public static String fenceW(int numPosts) {
-    int counter = 0;
+    int counter = 1;
     String fence = "|";
     if (numPosts == 1) {
       return fence;
@@ -21,4 +21,7 @@ public class Repeater {
     }
     return fence;
   }
+  
+//   public static String 
+    
 }
