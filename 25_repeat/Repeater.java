@@ -10,11 +10,12 @@ public class Repeater {
     String fence = "|";
     return fence;
     if (numPosts == 1) {
-      return fence;
-    }
-    while (counter < numPosts) {
-      fence += "--|";
-      counter++;
+      
+    } else {
+      while (counter < numPosts) {
+        fence += "--|";
+        counter++;
+     }
     }
     return fence;
   }
