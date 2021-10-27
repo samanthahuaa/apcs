@@ -1,3 +1,11 @@
+/*
+<PENDING TNPG> Yat Long Chan, Samantha Hua, Lindsay Phung
+APCS
+HW25 -- Do I repeat myself?/ make fence with while loop and recursive fxn.
+2021-10-26
+time spent: 0.5 hours
+*/
+
 public class Repeater {
   public static void main(String[] args){
     System.out.println(fenceW(1));
@@ -15,13 +23,10 @@ public class Repeater {
   public static String fenceW(int numPosts) {
     int counter = 1;
     String fence = "|";
-    if (numPosts == 1) {
-      return fence;
-    } else {
-      while (counter < numPosts) {
-        fence += "--|";
-        counter++;
-      }
+    while (counter < numPosts) {
+      fence += "--|";
+      counter++;
+    }
     }
     return fence;
   }
