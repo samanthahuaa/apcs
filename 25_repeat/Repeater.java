@@ -11,13 +11,13 @@ public class Repeater {
   public static String fenceW(int numPosts) {
     int counter = 0;
     String fence = "|";
-    if (numPosts != 1) {
+    if (numPosts == 1) {
+      return fence;
+    } else {
       while (counter < numPosts) {
         fence += "--|";
         counter++;
-     }
-    } else {
-      return fence;
+      }
     }
     return fence;
   }
