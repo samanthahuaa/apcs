@@ -17,6 +17,7 @@ public class Stats {
           counter++;
         }
     }
+    return gcd;
   }
   
   public static void main(String[] args) {
