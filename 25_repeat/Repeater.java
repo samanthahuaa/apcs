@@ -5,6 +5,10 @@ public class Repeater {
     System.out.println(fenceW(2));
     System.out.println(fenceW(5));
     
+    System.out.println(fenceR(1));
+    System.out.println(fenceR(2));
+    System.out.println(fenceR(5));
+    
     
   }
   
@@ -24,7 +28,7 @@ public class Repeater {
   
   public static String fenceR(int numPosts) {
     if (numPosts == 1) {
-      fence += "|"
+      fence += "|";
       return fence;
     } else {
       fence += "|--";
