@@ -16,5 +16,6 @@ public class Repeater {
       fence += "--|";
       counter++;
     }
+    return fence;
   }
 }
