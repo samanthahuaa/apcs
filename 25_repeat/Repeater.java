@@ -3,7 +3,7 @@ public class Repeater {
     fenceW(5);
   }
   
-  public String fenceW(int numPosts) {
+  public static String fenceW(int numPosts) {
     int counter = 0;
     String fence;
     return fence;
