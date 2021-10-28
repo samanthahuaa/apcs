@@ -21,7 +21,7 @@ public class Stats {
   }
   
   public static void main(String[] args) {
-    gcd(9,15);
-    gcd(3,14);
+    System.out.println(gcd(9,15));
+    System.out.println(gcd(3,14));
   }
 }
