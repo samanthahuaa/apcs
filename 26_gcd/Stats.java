@@ -32,11 +32,25 @@ public class Stats {
     }
   }
   
+  public static int gcdEW( int a, int b ) {
+    while (a != b) {
+      if (a > b) {
+        a = a-b;
+      } else {
+        b=b-a;
+      }
+    }
+    return a;
+  }
+  
   public static void main(String[] args) {
     System.out.println(gcd(9,15));
     System.out.println(gcd(3,14));
     
     System.out.println(gcdER(9,15));
     System.out.println(gcdER(3,14));
+    
+    System.out.println(gcdEW(9,15));
+    System.out.println(gcdEW(3,14));
   }
 }
