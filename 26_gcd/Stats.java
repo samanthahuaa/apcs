@@ -22,7 +22,7 @@ public class Stats {
     int gcd = a;
     int counter = 1;
     if (a == b) {
-      break;
+      return gcd;
     } else if (a < b) {
       while (counter < a) {
         if (a%counter == 0 && b%counter == 0) {
