@@ -5,13 +5,8 @@ public class countHi {
 		System.out.print("ran outside");
 		System.out.print(str.substring(i,i+1));
 		System.out.print(str.substring(i+1,i+2));
-		System.out.println(str.substring(i,i+1)) == "h");
-	    if ((str.substring(i,i+1)) == "h") {
-		System.out.println("ran once");
-	      if (str.substring(i+1,i+2) == "i") {
-		System.out.println("ran");
+	    if (str.substring(i,i+2) == "hi") {
 	        counter++;
-	      }
 	    }
 	  }
 	  return counter;
