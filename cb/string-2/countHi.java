@@ -8,7 +8,6 @@ public class countHi {
 	    if (str.substring(i,i+1) == "h") {
 			System.out.println("ran once");
 	      if (str.substring(i+1,i+2) == "i") {
-		      if 
 		System.out.println("ran");
 	        counter++;
 	      }
