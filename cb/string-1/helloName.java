@@ -4,8 +4,8 @@ public class helloName {
   }
   
   public static void main(String[] args) {
-    helloName("Bob");
-    helloName("Alice");
-    helloName("X");
+    System.out.println(helloName("Bob"));
+    System.out.println(helloName("Alice"));
+    System.out.println(helloName("X"));
   }
 }
