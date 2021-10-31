@@ -4,9 +4,9 @@ public class countHi {
 	  for (int i=0; i < (str.length() - 1); i++) {
 		System.out.print("ran outside");
 		System.out.print(str.substring(i,i+1));
-		 System.out.println(str.substring(i+1,i+2));
+		System.out.println(str.substring(i+1,i+2));
 	    if ((str.substring(i,i+1)) == "h") {
-			System.out.println("ran once");
+		System.out.println("ran once");
 	      if (str.substring(i+1,i+2) == "i") {
 		System.out.println("ran");
 	        counter++;
