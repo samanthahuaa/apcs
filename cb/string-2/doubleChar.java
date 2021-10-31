@@ -1,3 +1,5 @@
+// Given a string, return a string where for every char in the original, there are two chars.
+
 public class doubleChar {
   public static String doubleChar(String str) {
     String answer = "";
