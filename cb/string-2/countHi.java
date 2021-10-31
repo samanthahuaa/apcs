@@ -5,7 +5,7 @@ public class countHi {
 		System.out.print("ran outside");
 		System.out.print(str.substring(i,i+1));
 		System.out.print(str.substring(i+1,i+2));
-	    if (str.substring(i,i+2) == "hi") {
+	    if (str.substring(i,i+2).equals("hi")) {
 	        counter++;
 	    }
 	  }
