@@ -18,6 +18,8 @@ public class xyzThere {
   }
 
   public static void main(String[] args) {
-    System.out.println(xyzThere("a.xyz.abc"));
+    System.out.println(xyzThere("abcxyz"));
+    System.out.println(xxyzThere("abc.xyz"));
+    System.out.println(xyzThere("xyz.abc"));
   }
 }
