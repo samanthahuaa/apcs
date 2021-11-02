@@ -8,7 +8,7 @@ public class Commafier{
       ans += n;
     } else {
       for (int i = 0; i < strInt.length(); i ++){
-        if ((strInt.length() - i) % 3 == 0){
+        if ((strInt.length() - i) % 3 == 0 && i != 0){
           ans += ",";
         }
         ans += strInt.substring(i, i + 1);
