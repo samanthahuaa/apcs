@@ -1,9 +1,15 @@
 /***
- * Quad Puffs
+ * QUAD PUFFS - Yat Long Chan, Samantha Hua, Lindsay Phung, David Deng
  * APCS
- * HW31 --
+ * HW31 -- Otnay Ybay ethay Airhay Onway Ymay Inneechay Inchay Inchay
  * 2021-11-03
- * time spent: _hrs
+ * time spent: 0.8 hrs
+ * DISCO
+ * The word final indicates that the value of the variable can not be changed
+ * You can put boolean expressions in return statements and a boolean will be returned
+ * 
+ * QCC
+ * No questions unresolved
  *
  * class Pig
  * a Pig Latin translator
@@ -22,10 +28,8 @@
  *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
  ***/
 
-public class Pig
-{
+public class Pig{
   //Q: How does this initialization make your life easier?
-  //A: It allows us to reference all of the vowels at once.
   private static final String VOWELS = "aeiou";
 
 
@@ -35,13 +39,8 @@ public class Pig
     post: hasA("cat", "a") -> true
     hasA("cat", "p")       -> false
     =====================================*/
-  public static boolean hasA( String w, String letter )
-  {
-    if (w.indexOf(letter) != -1) {
-      return true;
-    } else {
-      return false;
-    }
+  public static boolean hasA( String w, String letter ){
+    return (w.indexOf(letter) != -1);
   }//end hasA()
 
 
@@ -49,14 +48,8 @@ public class Pig
     boolean isAVowel(String) -- tells whether a letter is a vowel
     precondition: letter.length() == 1
     =====================================*/
-  public static boolean isAVowel( String letter )
-  {
-    for (int i=0; i < VOWELS.length(); i++) {
-      if (letter.indexOf(VOWELS.substring(i, i+1)) != -1) {
-        return true;
-      }
-    }
-    return false;
+  public static boolean isAVowel( String letter ){
+    return (hasA(VOWELS, letter));
   }
 
 
@@ -65,18 +58,14 @@ public class Pig
     pre:  w != null
     post: countVowels("meatball") -> 3
     =====================================*/
-  public static int countVowels( String w )
-  {
-    int counter = 0;
-    for (int j=0; j < w.length(); j++) {
-      String character = w.substring(j,j+1);
-      for (int i=0; i < VOWELS.length(); i++) {
-        if (character.indexOf(VOWELS.substring(i, i+1)) != -1) {
-          counter++;
-        }
+  public static int countVowels( String w ){
+    int count = 0;
+    for(int i = 0; i < w.length(); i++){
+      if(isAVowel(w.substring(i, i + 1))){
+        count ++;
       }
     }
-    return counter;
+    return count;
   }
 
 
@@ -86,17 +75,13 @@ public class Pig
     post: hasAVowel("cat") -> true
     hasAVowel("zzz")       -> false
     =====================================*/
-  public static boolean hasAVowel( String w )
-  {
-    for (int j=0; j < w.length(); j++) {
-      String character = w.substring(j,j+1);
-      for (int i=0; i < VOWELS.length(); i++) {
-        if (character.indexOf(VOWELS.substring(i, i+1)) != -1) {
+  public static boolean hasAVowel( String w ){
+      for (int i = 0; i < w.length(); i ++){
+        if (isAVowel(w.substring(i, i + 1))){
           return true;
         }
       }
-    }
-    return false;
+     return false;
   }
 
 
@@ -105,42 +90,27 @@ public class Pig
     pre:  w != null
     post: allVowels("meatball") -> "eaa"
     =====================================*/
-  public static String allVowels( String w )
-  {
-    String answer = "";
-    for (int j=0; j < w.length(); j++) {
-      String character = w.substring(j,j+1);
-      for (int i=0; i < VOWELS.length(); i++) {
-        if (character.indexOf(VOWELS.substring(i, i+1)) != -1) {
-          answer += character;
+  public static String allVowels( String w ){
+    String ans = "";
+      for (int i = 0; i < w.length(); i ++){
+        if (isAVowel(w.substring(i, i + 1))){
+          ans += w.substring(i, i + 1);
         }
       }
-    }
-    return answer;
+    return ans;
   }
 
-
-  public static void main( String[] args )
-  {
-    System.out.println(hasA("boop","a"));
-    System.out.println(hasA("boop","p"));
-    System.out.println();
-
-    System.out.println(isAVowel("i"));
-    System.out.println(isAVowel("l"));
-    System.out.println();
-
+  public static void main( String[] args ){
+    System.out.println(hasA("cat", "a"));
+    System.out.println(hasA("cat", "p"));
+    System.out.println(isAVowel("c"));
+    System.out.println(isAVowel("a"));
+    System.out.println(countVowels("meetbaall"));
     System.out.println(countVowels("meatball"));
-    System.out.println(countVowels("the quick brown fox jumps over the lazy dog"));
-    System.out.println();
-
-    System.out.println(hasAVowel("boop"));
-    System.out.println(hasAVowel("gym"));
-    System.out.println();
-
+    System.out.println(hasAVowel("cat"));
+    System.out.println(hasAVowel("zzz"));
     System.out.println(allVowels("meatball"));
-    System.out.println(allVowels("markers"));
-
+    System.out.println(allVowels("meetbaall"));
   }//end main()
 
 }//end class Pig
