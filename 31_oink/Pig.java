@@ -37,8 +37,11 @@ public class Pig
     =====================================*/
   public static boolean hasA( String w, String letter )
   {
-    /* YOUR IMPLEMENTATION HERE */
-    w.indexOf(letter);
+    if (w.indexOf(letter) != -1) {
+      return true;
+    } else {
+      return false;
+    }
   }//end hasA()
 
 
@@ -48,7 +51,12 @@ public class Pig
     =====================================*/
   public static boolean isAVowel( String letter )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    for (int i=0; i < VOWELS.length(); i++) {
+      if (letter.indexOf(VOWELS.substring(i, i+1)) != -1) {
+        return true;
+      }
+    }
+    return false;
   }
 
 
@@ -59,7 +67,16 @@ public class Pig
     =====================================*/
   public static int countVowels( String w )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    int counter = 0;
+    for (int j=0; j < w.length(); j++) {
+      String character = w.substring(j,j+1);
+      for (int i=0; i < VOWELS.length(); i++) {
+        if (character.indexOf(VOWELS.substring(i, i+1)) != -1) {
+          counter++;
+        }
+      }
+    }
+    return counter;
   }
 
 
@@ -71,7 +88,15 @@ public class Pig
     =====================================*/
   public static boolean hasAVowel( String w )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    for (int j=0; j < w.length(); j++) {
+      String character = w.substring(j,j+1);
+      for (int i=0; i < VOWELS.length(); i++) {
+        if (character.indexOf(VOWELS.substring(i, i+1)) != -1) {
+          return true;
+        }
+      }
+    }
+    return false;
   }
 
 
@@ -82,14 +107,40 @@ public class Pig
     =====================================*/
   public static String allVowels( String w )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    String answer = "";
+    for (int j=0; j < w.length(); j++) {
+      String character = w.substring(j,j+1);
+      for (int i=0; i < VOWELS.length(); i++) {
+        if (character.indexOf(VOWELS.substring(i, i+1)) != -1) {
+          answer += character;
+        }
+      }
+    }
+    return answer;
   }
 
 
   public static void main( String[] args )
   {
-    hasA("boop","a");
-    /* YOUR TEST CALLS HERE */
+    System.out.println(hasA("boop","a"));
+    System.out.println(hasA("boop","p"));
+    System.out.println();
+
+    System.out.println(isAVowel("i"));
+    System.out.println(isAVowel("l"));
+    System.out.println();
+
+    System.out.println(countVowels("meatball"));
+    System.out.println(countVowels("the quick brown fox jumps over the lazy dog"));
+    System.out.println();
+
+    System.out.println(hasAVowel("boop"));
+    System.out.println(hasAVowel("gym"));
+    System.out.println();
+
+    System.out.println(allVowels("meatball"));
+    System.out.println(allVowels("markers"));
+
   }//end main()
 
 }//end class Pig
