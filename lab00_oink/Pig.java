@@ -90,7 +90,13 @@ public class Pig {
     hasAVowel("zzz") -> false
     **/
   public static boolean hasAVowel( String w ) {
-    return w.indexOf(w) >= 0;
+    for (int i = 0; i < w.length(); i ++){
+        if (isAVowel(w.substring(i, i + 1))){
+          return true;
+        }
+      }
+     return false;
+    // return w.indexOf(w) >= 0;
   }
 
 
@@ -162,7 +168,7 @@ public class Pig {
 
     return ans;
   }
-  
+
       /*=====================================
       boolean isPunc(String) -- tells whether a character is punctuation
       pre:  symbol.length() == 1
@@ -181,7 +187,7 @@ public class Pig {
             isUpperCase("A") -> true
       =====================================*/
     public static boolean isUpperCase( String letter ) {
-
+      return CAPS.indexOf(letter) != -1;
     }
 
 
@@ -192,24 +198,44 @@ public class Pig {
             hasPunc("cat") -> false
       =====================================*/
     public static boolean hasPunc( String w ) {
-
+      for (int i=0; i<w.length(); i++) {
+        if (isPunc(w.substring(i,i+1)) != false) {
+          return true;
+        }
+      }
+      return false;
     }
 
+    public static isASpace(string w) {
+      String space = " ";
+      return space.indexOf(w) != -1;
+    }
 
+    public static String[] parseString(String w) {
+      String ans = ""; //init return String
+  
+      for( int i = 0; i < w.length(); i++ ) {
+
+        if ( isASpace( w.substring(i,i+1) ) )
+          ans += w.substring( i, i+1 ); //grow the return String
+      }
+      // ans will be a string of all the indexes of the spaces
+    }
     /*=====================================
       boolean beginsWithUpper(String) -- tells whether 1st letter is uppercase
       pre:  w != null and w.length() > 0
       post: beginsWithUpper("Apple") -> true
             beginsWithUpper("apple") -> false
       =====================================*/
-    public static boolean beginsWithUpper( String w ) {
-
-	return isUpperCase(w.substring(0,1) );
-    }
+  //   public static boolean beginsWithUpper( String w ) {
+  //
+	// return isUpperCase(w.substring(0,1) );
+  //   }
 
   public static void main( String[] args ) {
 
     for( String word : args ) {
+      System.out.println("hasAVowel \t" + hasAVowel(word));
       System.out.println( "allVowels \t" + allVowels(word) );
       System.out.println( "firstVowels \t" + firstVowel(word) );
       System.out.println( "countVowels \t" + countVowels(word) );
