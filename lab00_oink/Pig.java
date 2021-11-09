@@ -1,15 +1,14 @@
 /***
- * QUAD PUFFS - Yat Long Chan, Samantha Hua, Lindsay Phung, David Deng
+ * nnnn - Samantha Hua & Courtney Huang
  * APCS
- * HW31 -- Otnay Ybay ethay Airhay Onway Ymay Inneechay Inchay Inchay
- * 2021-11-03
+ * L00: Etterbay Odingcay Oughthray Ollaborationcay
+ * 2021-11-09
  * time spent: 0.8 hrs
  * DISCO
- * The word final indicates that the value of the variable can not be changed
- * You can put boolean expressions in return statements and a boolean will be returned
+ * 
  * 
  * QCC
- * No questions unresolved
+ * 
  *
  * class Pig
  * a Pig Latin translator
