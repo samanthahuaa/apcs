@@ -25,7 +25,7 @@
 
 public class Pig {
 
-  private static final String VOWELS = "aeiou";
+  private static final String VOWELS = "aeiouy";
   private static final String CAPS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   private static final String PUNCS = ".,:;!?";
 
@@ -162,15 +162,15 @@ public class Pig {
 
     return ans;
   }
-
-  /*=====================================
+  
+      /*=====================================
       boolean isPunc(String) -- tells whether a character is punctuation
       pre:  symbol.length() == 1
       post: isPunc(".") -> true
             isPunc("b") -> false
       =====================================*/
     public static boolean isPunc( String symbol ) {
-      return PUNCS.indexOf( symbol ) != -1;
+	return PUNCS.indexOf( symbol ) != -1;
     }
 
 
@@ -181,7 +181,7 @@ public class Pig {
             isUpperCase("A") -> true
       =====================================*/
     public static boolean isUpperCase( String letter ) {
-      return CAPS.indexOf(letter) != -1;
+
     }
 
 
@@ -192,12 +192,7 @@ public class Pig {
             hasPunc("cat") -> false
       =====================================*/
     public static boolean hasPunc( String w ) {
-      for (int i=0; i < w.length(); i++) {
-        if (isPunc(w.substring(i,i+1)) != false) {
-          return true;
-        }
-      }
-      return false;
+
     }
 
 
@@ -207,18 +202,18 @@ public class Pig {
       post: beginsWithUpper("Apple") -> true
             beginsWithUpper("apple") -> false
       =====================================*/
-    // public static boolean beginsWithUpper( String w ) {
-    //   return isUpperCase(w.substring(0,1) );
-    // }
+    public static boolean beginsWithUpper( String w ) {
+
+	return isUpperCase(w.substring(0,1) );
+    }
 
   public static void main( String[] args ) {
 
     for( String word : args ) {
-      System.out.println( "hasPunc \t" + hasPunc(word) );
-      // System.out.println( "allVowels \t" + allVowels(word) );
-      // System.out.println( "firstVowels \t" + firstVowel(word) );
-      // System.out.println( "countVowels \t" + countVowels(word) );
-      // System.out.println( "engToPig \t" + engToPig(word) );
+      System.out.println( "allVowels \t" + allVowels(word) );
+      System.out.println( "firstVowels \t" + firstVowel(word) );
+      System.out.println( "countVowels \t" + countVowels(word) );
+      System.out.println( "engToPig \t" + engToPig(word) );
       System.out.println( "---------------------" );
     }
 
