@@ -27,6 +27,7 @@ public class Pig {
 
   private static final String VOWELS = "aeiouy";
   private static final String CAPS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  private static final String LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
   private static final String PUNCS = ".,:;!?";
 
 
@@ -206,43 +207,67 @@ public class Pig {
       return false;
     }
 
-    public static isASpace(string w) {
-      String space = " ";
-      return space.indexOf(w) != -1;
+    // not as relevant right now
+    // public static isASpace(string w) {
+    //   String space = " ";
+    //   return space.indexOf(w) != -1;
+    // }
+
+    public static String toUpperCase(String w) {
+      int x = LOWERCASE.indexOf(w);
+      return CAPS.substring(x-1,x);
     }
 
-    public static String[] parseString(String w) {
-      String ans = ""; //init return String
-  
-      for( int i = 0; i < w.length(); i++ ) {
-
-        if ( isASpace( w.substring(i,i+1) ) )
-          ans += w.substring( i, i+1 ); //grow the return String
-      }
-      // ans will be a string of all the indexes of the spaces
-    }
     /*=====================================
       boolean beginsWithUpper(String) -- tells whether 1st letter is uppercase
       pre:  w != null and w.length() > 0
       post: beginsWithUpper("Apple") -> true
             beginsWithUpper("apple") -> false
       =====================================*/
-  //   public static boolean beginsWithUpper( String w ) {
-  //
-	// return isUpperCase(w.substring(0,1) );
-  //   }
-
-  public static void main( String[] args ) {
-
-    for( String word : args ) {
-      System.out.println("hasAVowel \t" + hasAVowel(word));
-      System.out.println( "allVowels \t" + allVowels(word) );
-      System.out.println( "firstVowels \t" + firstVowel(word) );
-      System.out.println( "countVowels \t" + countVowels(word) );
-      System.out.println( "engToPig \t" + engToPig(word) );
-      System.out.println( "---------------------" );
+    public static boolean beginsWithUpper( String w ) {
+      return isUpperCase(w.substring(0,1));
     }
 
-  }//end main()
+    public static String[] parseString(String w) {
+      // originally to break up a string with multiple words into multiple strings each containing a word
+      // String ans = ""; //init return String
+      //
+      // for( int i = 0; i < w.length(); i++ ) {
+      //
+      //   if ( isASpace( w.substring(i,i+1) ) )
+      //     ans += w.substring( i, i+1 ); //grow the return String
+      // }
+      // ans will be a string of all the indexes of the spaces
+
+      // to ease the eyes a bit
+      String firstLetter = w.substring(0,1);
+      String restOfWord = w.substring(1,w.length()-1);
+      if (beginsWithUpper(w) == true) {
+        String restOfWordStartingLetter = toUpperCase(restOfWord.substring(0,1));
+        restOfWord = restOfWord.substring(1,restOfWord.length());
+        System.out.println(restOfWord);
+        System.out.println(restOfWordStartingLetter);
+        return restOfWordStartingLetter + restOfWord + firstLetter;
+      }
+
+      // if (beginsWithVowel(w) == true) {
+      //   return restOfWord + firstLetter + "way";
+      // } else {
+      //   return restOfWord + firstLetter + "ay";
+      // }
+    }
+    public static void main( String[] args ) {
+
+      for( String word : args ) {
+        System.out.println("parseString \t" + parseString(word));
+        // System.out.println("hasAVowel \t" + hasAVowel(word));
+        // System.out.println( "allVowels \t" + allVowels(word) );
+        // System.out.println( "firstVowels \t" + firstVowel(word) );
+        // System.out.println( "countVowels \t" + countVowels(word) );
+        // System.out.println( "engToPig \t" + engToPig(word) );
+        System.out.println( "---------------------" );
+      }
+
+    }//end main()
 
 }//end class Pig
