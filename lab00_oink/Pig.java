@@ -295,7 +295,6 @@ public class Pig {
             punc = w.substring(puncIndex, puncIndex+1);
           }
           w = capitalization(stringWithoutPunc);
-          System.out.print(puncIndex);
           return w + "ay" + punc;
 
       }
