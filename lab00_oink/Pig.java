@@ -25,7 +25,7 @@
 
 public class Pig {
 
-  private static final String VOWELS = "aeiouy";
+  private static final String VOWELS = "aeiouyAEIOUY";
   private static final String CAPS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   private static final String LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
   private static final String PUNCS = ".,:;!?";
@@ -215,9 +215,13 @@ public class Pig {
 
     public static String toUpperCase(String w) {
       int x = LOWERCASE.indexOf(w);
-      return CAPS.substring(x-1,x);
+      return CAPS.substring(x,x+1);
     }
 
+    public static String toLowerCase(String w) {
+      int x = CAPS.indexOf(w);
+      return LOWERCASE.substring(x,x+1);
+    }
     /*=====================================
       boolean beginsWithUpper(String) -- tells whether 1st letter is uppercase
       pre:  w != null and w.length() > 0
@@ -228,7 +232,18 @@ public class Pig {
       return isUpperCase(w.substring(0,1));
     }
 
-    public static String[] parseString(String w) {
+    public static String capitalization(String w) {
+      String firstLetter = w.substring(0,1);
+      String restOfWord = w.substring(1,w.length());
+      if (beginsWithUpper(w) == true) {
+        String restOfWordStartingLetter = toUpperCase(restOfWord.substring(0,1));
+        restOfWord = restOfWord.substring(1,restOfWord.length());
+        firstLetter = toLowerCase(firstLetter);
+        return restOfWordStartingLetter + restOfWord + firstLetter;
+      }
+      return w;
+    }
+    public static String parseString(String w) {
       // originally to break up a string with multiple words into multiple strings each containing a word
       // String ans = ""; //init return String
       //
@@ -240,24 +255,16 @@ public class Pig {
       // ans will be a string of all the indexes of the spaces
 
       // to ease the eyes a bit
-      String firstLetter = w.substring(0,1);
-      String restOfWord = w.substring(1,w.length()-1);
-      if (beginsWithUpper(w) == true) {
-        String restOfWordStartingLetter = toUpperCase(restOfWord.substring(0,1));
-        restOfWord = restOfWord.substring(1,restOfWord.length());
-        System.out.println(restOfWord);
-        System.out.println(restOfWordStartingLetter);
-        return restOfWordStartingLetter + restOfWord + firstLetter;
-      }
 
-      // if (beginsWithVowel(w) == true) {
-      //   return restOfWord + firstLetter + "way";
-      // } else {
-      //   return restOfWord + firstLetter + "ay";
-      // }
+      w = capitalization(w);
+      int l = w.length(); //easier on the eyes
+      if (isAVowel(w.substring(l-1,l)) == true) {
+        return w + "way";
+      } else {
+        return w + "ay";
+      }
     }
     public static void main( String[] args ) {
-
       for( String word : args ) {
         System.out.println("parseString \t" + parseString(word));
         // System.out.println("hasAVowel \t" + hasAVowel(word));
