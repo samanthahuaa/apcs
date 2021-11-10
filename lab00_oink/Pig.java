@@ -1,10 +1,26 @@
 /***
- * Clyde "Thluffy" Sinclair
+ * nnnn - Samantha Hua, Courtney Huang, and Ben Belotser
  * APCS
- * HW31 -- deploying linear search on Strings, using helper methods
- * 2021-11-04r
- * time spent: .5hrs
+ * L00: Etterbay Odingcay Oughthray Ollaborationcay
+ * 2021-11-09
+ * time spent: 2 hrs
  *
+DISCO
+ - Helper method are super helpful in creating clear and understable code.
+ - hasNextLine() allows us to determine whether there are more test cases to go through
+ - next() allows us to see the text in each line
+QCC
+ - Why can't we do PUNCS.indexOf(w) != -1 to search whether or not a String contains punctuation. We tested outside of Pig, and thought that indexOf can search each letter in a String.
+ - How can you input Strings with multiple words into a java file (ex: java Pig "hello my name is bob" does not work)?
+ - How can the computer see semicolons at the end of inputs inot a java file (ex: java Pig hello;)?
+ - How can we resolve this error (Exception in thread "main" java.util.NoSuchElementException)? We did not know what this issue was concerning.
+HOW WE UTILIZED SCANNER DEMO (v2)
+ - We used scanner to pass in test cases from an exterior file into our Pig.java
+ - It allowed us to see the outputs of a variety of types of test cases all at once
+WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO
+ - If you don't tell the computer to stop before you run out of test cases, you will have a run time error.
+ - To resolve this issue, we used hasNextLine()
+ 
  * class Pig
  * a Pig Latin translator
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
