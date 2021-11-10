@@ -4,7 +4,12 @@
  * HW31 -- deploying linear search on Strings, using helper methods
  * 2021-11-04r
  * time spent: .5hrs
- *
+ 
+ * NEW IN v2
+  - punctuation
+  - Strings starting with two consonants
+  - Scanner utilization
+  
  * class Pig
  * a Pig Latin translator
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
