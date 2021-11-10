@@ -295,7 +295,6 @@ public class Pig {
             punc = w.substring(puncIndex, puncIndex+1);
           }
           w = capitalization(stringWithoutPunc);
-          System.out.print(puncIndex);
           return w + "ay" + punc;
 
       }
@@ -303,8 +302,8 @@ public class Pig {
     }
     public static void main( String[] args ) {
       Scanner words = new Scanner(System.in);
-      while (words.nextLine() != null) {
-        System.out.println(parseString(words.nextLine()));
+      while (words.hasNextLine()) {
+        System.out.println(parseString(words.next()));
       }
       // for( String words.nextline() : words ) {
         //word = in.nextString();
