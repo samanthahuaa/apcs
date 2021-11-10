@@ -14,6 +14,7 @@ QCC
  - How can you input Strings with multiple words into a java file (ex: java Pig "hello my name is bob" does not work)?
  - How can the computer see semicolons at the end of inputs inot a java file (ex: java Pig hello;)?
  - How can we resolve this error (Exception in thread "main" java.util.NoSuchElementException)? We did not know what this issue was concerning.
+ - We assumed that the punctuation of each input would be at the end of the String. Besides hyphens, can we truly assume that this will be the case?
 HOW WE UTILIZED SCANNER DEMO (v2)
  - We used scanner to pass in test cases from an exterior file into our Pig.java
  - It allowed us to see the outputs of a variety of types of test cases all at once
