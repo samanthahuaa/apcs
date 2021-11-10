@@ -4,7 +4,11 @@
  * L00: Etterbay Odingcay Oughthray Ollaborationcay
  * 2021-11-09
  * time spent: .5 hrs
- *
+ 
+ * NEW IN v0
+  - hasPunc()
+  - isUpperCase()
+ 
  * class Pig
  * a Pig Latin translator
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
