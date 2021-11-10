@@ -28,7 +28,7 @@ public class Pig {
   private static final String VOWELS = "aeiouyAEIOUY";
   private static final String CAPS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   private static final String LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
-  private static final String PUNCS = ".,:;!?";
+  private static final String PUNCS = ".,:;!?"; // doesn't work with ;
 
 
   /**
@@ -249,10 +249,10 @@ public class Pig {
       //return PUNCS.indexOf(w);
       for (int i = 0; i < w.length(); i ++){
           if (isPunc(w.substring(i, i + 1))){
-            return true;
+            return i;
           }
         }
-       return false;
+       return -1;
     }
 
     public static String parseString(String w) {
@@ -302,17 +302,21 @@ public class Pig {
 
     }
     public static void main( String[] args ) {
-      for( String word : args ) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("parseString \t" + parseString(word));
+      Scanner words = new Scanner(System.in);
+      while (words.nextLine() != null) {
+        System.out.println(parseString(words.nextLine()));
+      }
+      // for( String words.nextline() : words ) {
+        //word = in.nextString();
+      //   System.out.println("parseString \t" + parseString(word));
         // System.out.println("hasPunc \t" + hasPunc(word));
         // System.out.println("hasAVowel \t" + hasAVowel(word));
         // System.out.println( "allVowels \t" + allVowels(word) );
         // System.out.println( "firstVowels \t" + firstVowel(word) );
         // System.out.println( "countVowels \t" + countVowels(word) );
         // System.out.println( "engToPig \t" + engToPig(word) );
-        System.out.println( "---------------------" );
-      }
+      //   System.out.println( "---------------------" );
+      // }
 
     }//end main()
 
