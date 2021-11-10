@@ -22,7 +22,7 @@
  *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
  ***/
 
-
+import java.util.Scanner;  // Import the Scanner class
 public class Pig {
 
   private static final String VOWELS = "aeiouyAEIOUY";
@@ -177,7 +177,7 @@ public class Pig {
             isPunc("b") -> false
       =====================================*/
     public static boolean isPunc( String symbol ) {
-	return PUNCS.indexOf( symbol ) != -1;
+      return PUNCS.indexOf( symbol ) != -1;
     }
 
 
@@ -199,6 +199,7 @@ public class Pig {
             hasPunc("cat") -> false
       =====================================*/
     public static boolean hasPunc( String w ) {
+      // return PUNCS.indexOf(w) != -1; why doesn't this work?
       for (int i=0; i<w.length(); i++) {
         if (isPunc(w.substring(i,i+1)) != false) {
           return true;
@@ -207,11 +208,10 @@ public class Pig {
       return false;
     }
 
-    // not as relevant right now
-    // public static isASpace(string w) {
-    //   String space = " ";
-    //   return space.indexOf(w) != -1;
-    // }
+    public static boolean isASpace(String w) {
+      String space = " ";
+      return space.indexOf(w) != -1;
+    }
 
     public static String toUpperCase(String w) {
       int x = LOWERCASE.indexOf(w);
@@ -241,32 +241,71 @@ public class Pig {
         firstLetter = toLowerCase(firstLetter);
         return restOfWordStartingLetter + restOfWord + firstLetter;
       }
-      return w;
+      return restOfWord + firstLetter;
     }
+
+    public static int punctuation(String w) {
+      //int l = l.length(); // easier on the eyes
+      //return PUNCS.indexOf(w);
+      for (int i = 0; i < w.length(); i ++){
+          if (isPunc(w.substring(i, i + 1))){
+            return true;
+          }
+        }
+       return false;
+    }
+
     public static String parseString(String w) {
-      // originally to break up a string with multiple words into multiple strings each containing a word
-      // String ans = ""; //init return String
-      //
+      // not working yet
+      // break up a string with multiple words into multiple strings each containing a singular word
+      // String[] arrayOfWords = new String[0]; //init return String
+      // int previous = 0;
+      // int numberOfWords = 0;
       // for( int i = 0; i < w.length(); i++ ) {
-      //
-      //   if ( isASpace( w.substring(i,i+1) ) )
-      //     ans += w.substring( i, i+1 ); //grow the return String
+      //   if ( isASpace( w.substring(i,i+1) ) ) {
+      //     arrayOfWords[numberOfWords] += w.substring(previous, i); //grow the return String[]
+      //     previous = i + 1;
+      //     numberOfWords++;
+      //   }
       // }
-      // ans will be a string of all the indexes of the spaces
 
-      // to ease the eyes a bit
-
-      w = capitalization(w);
       int l = w.length(); //easier on the eyes
-      if (isAVowel(w.substring(l-1,l)) == true) {
-        return w + "way";
+      String stringWithoutPunc = w;
+      String punc = "";
+      if (isAVowel(w.substring(0,1)) == true) {
+          int puncIndex = punctuation(w);
+          if (puncIndex != -1) {
+            stringWithoutPunc = w.substring(0,puncIndex) + w.substring(puncIndex + 1);
+            punc = w.substring(puncIndex, puncIndex+1);
+          }
+          w = capitalization(stringWithoutPunc);
+          return w + "way" + punc;
+      } else if (((isAVowel(w.substring(0,1))) == false) && (isAVowel(w.substring(1,2)) == false)) {
+          int puncIndex = punctuation(w);
+          if (puncIndex != -1) {
+            stringWithoutPunc = w.substring(0,puncIndex) + w.substring(puncIndex + 1);
+            punc = w.substring(puncIndex, puncIndex+1);
+          }
+          w = capitalization(stringWithoutPunc);
+          return w.substring(1,w.length()) + w.substring(0,1) + "ay" + punc;
       } else {
-        return w + "ay";
+          int puncIndex = punctuation(w);
+          if (puncIndex != -1) {
+            stringWithoutPunc = w.substring(0,puncIndex) + w.substring(puncIndex + 1);
+            punc = w.substring(puncIndex, puncIndex+1);
+          }
+          w = capitalization(stringWithoutPunc);
+          System.out.print(puncIndex);
+          return w + "ay" + punc;
+
       }
+
     }
     public static void main( String[] args ) {
       for( String word : args ) {
+        Scanner in = new Scanner(System.in);
         System.out.println("parseString \t" + parseString(word));
+        // System.out.println("hasPunc \t" + hasPunc(word));
         // System.out.println("hasAVowel \t" + hasAVowel(word));
         // System.out.println( "allVowels \t" + allVowels(word) );
         // System.out.println( "firstVowels \t" + firstVowel(word) );
