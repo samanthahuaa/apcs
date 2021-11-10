@@ -1,9 +1,9 @@
 /***
- * Samantha Hua & Courtney Huang
+ * nnnn - Samantha Hua, Ben Beloster, & Courtney Huang
  * APCS
  * L00: Etterbay Odingcay Oughthray Ollaborationcay
- * 2021-11-08
- * time spent: .5hrs
+ * 2021-11-09
+ * time spent: .5 hrs
  *
  * class Pig
  * a Pig Latin translator
