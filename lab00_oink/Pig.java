@@ -303,8 +303,8 @@ public class Pig {
     }
     public static void main( String[] args ) {
       Scanner words = new Scanner(System.in);
-      while (words.nextString() != null) {
-        System.out.println(parseString(words.nextLine()));
+      while (words.hasNextLine()) {
+        System.out.println(parseString(words.next()));
       }
       // for( String words.nextline() : words ) {
         //word = in.nextString();
