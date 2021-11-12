@@ -4,7 +4,11 @@
  * L00: Etterbay Odingcay Oughthray Ollaborationcay
  * 2021-11-09
  * time spent: .6 hrs
- *
+
+ * NEW IN v1
+  - capitalization()
+  - check to see if the string begins with two vowels + whether to add "way" or "ay" to the end of the String
+  
  * class Pig
  * a Pig Latin translator
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~

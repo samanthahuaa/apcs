@@ -40,6 +40,14 @@ public class Driver {
     //test default constructor
     
       Coin mine = new Coin();
+	  //testing for test #2
+	  Coin drop = new Coin();
+	  Coin dead = new Coin();
+	  Coin fred = new Coin();
+	  System.out.println(drop == dead);
+	  System.out.println(drop == fred);
+	  System.out.println(drop.equals(dead));
+	  System.out.println(drop.equals(fred));
       //test 1st overloaded constructor
       Coin yours = new Coin( "quarter" );
       //test 2nd overloaded constructor

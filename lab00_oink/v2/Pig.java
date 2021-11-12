@@ -4,7 +4,12 @@
  * HW31 -- deploying linear search on Strings, using helper methods
  * 2021-11-04r
  * time spent: .5hrs
- *
+ 
+ * NEW IN v2
+  - punctuation
+  - Strings starting with two consonants
+  - Scanner utilization
+  
  * class Pig
  * a Pig Latin translator
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
@@ -295,7 +300,6 @@ public class Pig {
             punc = w.substring(puncIndex, puncIndex+1);
           }
           w = capitalization(stringWithoutPunc);
-          System.out.print(puncIndex);
           return w + "ay" + punc;
 
       }
@@ -303,8 +307,8 @@ public class Pig {
     }
     public static void main( String[] args ) {
       Scanner words = new Scanner(System.in);
-      while (words.nextLine() != null) {
-        System.out.println(parseString(words.nextLine()));
+      while (words.hasNextLine()) {
+        System.out.println(parseString(words.next()));
       }
       // for( String words.nextline() : words ) {
         //word = in.nextString();
