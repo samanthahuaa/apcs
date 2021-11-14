@@ -280,13 +280,12 @@ public class Pig {
 
     }
     public static void main( String[] args ) {
-      // Scanner words = new Scanner(System.in);
-      // while (words.hasNextLine()) {
-      //   System.out.println(parseString(words.next()));
-      // }
-       // String words.nextline()
-      for( String word : args ) {
-        // word = in.nextString();
+      Scanner words = new Scanner(System.in);
+      while (words.hasNextLine()) {
+        System.out.println(parseString(words.next()));
+      }
+      for( String words.nextline() : words ) {
+        word = in.nextString();
         System.out.println("parseString \t" + parseString(word));
         System.out.println("hasPunc \t" + hasPunc(word));
         System.out.println("hasAVowel \t" + hasAVowel(word));
