@@ -1,3 +1,7 @@
+// fixed words that begin with vowels. had originally misunderstood how to translate words that begin with vowels
+// before: away --> wayaway
+// now: away --> awayway
+
 import java.util.Scanner;  // Import the Scanner class
 public class Pig {
 
@@ -254,8 +258,7 @@ public class Pig {
             stringWithoutPunc = w.substring(0,puncIndex) + w.substring(puncIndex + 1);
             punc = w.substring(puncIndex, puncIndex+1);
           }
-          w = capitalization(stringWithoutPunc);
-          return w + "way" + punc;
+          return stringWithoutPunc + "way" + punc;
       } else if (((isAVowel(w.substring(0,1))) == false) && (isAVowel(w.substring(1,2)) == false)) {
           int puncIndex = punctuation(w);
           if (puncIndex != -1) {
@@ -277,21 +280,22 @@ public class Pig {
 
     }
     public static void main( String[] args ) {
-      Scanner words = new Scanner(System.in);
-      while (words.hasNextLine()) {
-        System.out.println(parseString(words.next()));
-      }
-      // for( String words.nextline() : words ) {
-        //word = in.nextString();
-      //   System.out.println("parseString \t" + parseString(word));
-        // System.out.println("hasPunc \t" + hasPunc(word));
-        // System.out.println("hasAVowel \t" + hasAVowel(word));
-        // System.out.println( "allVowels \t" + allVowels(word) );
-        // System.out.println( "firstVowels \t" + firstVowel(word) );
-        // System.out.println( "countVowels \t" + countVowels(word) );
-        // System.out.println( "engToPig \t" + engToPig(word) );
-      //   System.out.println( "---------------------" );
+      // Scanner words = new Scanner(System.in);
+      // while (words.hasNextLine()) {
+      //   System.out.println(parseString(words.next()));
       // }
+       // String words.nextline()
+      for( String word : args ) {
+        // word = in.nextString();
+        System.out.println("parseString \t" + parseString(word));
+        System.out.println("hasPunc \t" + hasPunc(word));
+        System.out.println("hasAVowel \t" + hasAVowel(word));
+        System.out.println( "allVowels \t" + allVowels(word) );
+        System.out.println( "firstVowels \t" + firstVowel(word) );
+        System.out.println( "countVowels \t" + countVowels(word) );
+        System.out.println( "engToPig \t" + engToPig(word) );
+        System.out.println( "---------------------" );
+      }
 
     }//end main()
 
