@@ -5,7 +5,9 @@ the largest and smallest values in the array. If there are
 multiple copies of the smallest value, ignore just one copy,
 and likewise for the largest value. Use int division to produce
 the final average. You may assume that the array is length 3 or more.
-*/public class centeredAverage {
+*/
+
+public class centeredAverage {
 	public static int centeredAve(int[] nums) {
 		int max = nums[0];
 		int min = nums[0];
