@@ -24,7 +24,7 @@ public class bigDiff {
 		int[] test2 = {2, 10, 7, 2};
 
 		System.out.println(bigDif(test0));
-    System.out.println(bigDif(test1));
-    System.out.println(bigDif(test2));
+  		System.out.println(bigDif(test1));
+   		System.out.println(bigDif(test2));
 	}
 }
