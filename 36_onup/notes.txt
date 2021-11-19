@@ -1,0 +1,24 @@
+There are 3 types of errors:
+  1. Compile-time errors -- syntax error
+  2. Run-time errors -- error while running the program
+  3. Logic errors - code doesn't do what you want
+
+1:
+ - Look for the placement of where the error occurred. Error might be there or it might not be.
+ - Debugging by bisection - cut the code in half to see where the error is. Keep cutting the error-causing section in half
+   until you find a more specific location of the errors
+
+2:
+ - Use print statements to check your code
+    - variable values in/out of loops
+    - when you enter/exit a loop
+    - boolean statements in your loops
+ - Don't overdo it to the point where you're confused with the print statements. Comment out things as needed
+
+3:
+ - Trace your code and see where your ideas + reality don't align
+ - Check that the things from the Java library really do what you think they're doing. Check documentation for that code
+ - Break your code down into smaller, easier to understand pieces of code
+ - Make sure you call the right file
+ - Explain your code and logic to your ducky
+ - Ask another person for help
