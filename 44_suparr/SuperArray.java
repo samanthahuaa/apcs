@@ -31,7 +31,7 @@
 
  */
 
-public class SuperArray {
+public class SuperArray{
 
   private int[] _data;  //underlying ("encapsulated") container
   private int _size;    //number of elements in this SuperArray
