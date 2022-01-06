@@ -2,26 +2,31 @@
 // APCS pd7
 // HW53 -- implementing insertion sort
 // 2022-01-06r
-// time spent:  hrs
+// time spent: 0.7 hrs
 
 /******************************
  * class InsertionSort -- implements InsertionSort algorithm
  *
  * ALGO:
- *
+ * An outer for loop that iterates through each element in the input array
+ * An inner for loop that compares each element to the one that comes before import junit.framework.TestCase;
+    * If the element with the smaller index is larger than the element with the larger index, they swap places
+    * This process continues until the value with the smaller index is less than the element with the larger index
  * DISCO
- *
+ * A one item array is always sorted
+ * The SOP statements are useful for seeing intermediate steps
  * QCC
+ * We think that this method of sorting is less efficient than Selection sort because more swaps are performed
  * q0: How many passes to sort n elements?
- * a0:
+ * a0: n-1
  * q1: What do you know after pass p?
- * a1:
+ * a1: the leftmost p+1 values are sorted
  * q2: How will you know when sorted?
- * a2:
+ * a2: when you sort the last value in the array -->  when you reach n-1 passes
  * q3: What constitues a pass?
- * a3:
+ * a3: adding a value to the sorted region and sorting it
  * q4: What must you track?
- * a4:
+ * a4: the size of the sorted/unsorted region
  ******************************/
 
 
@@ -61,21 +66,26 @@ public class InsertionSort
   // postcondition: data's elements sorted in ascending order
   public static void insertionSortV( ArrayList<Comparable> data )
   {
-    for(int partition = 1; partition < ; partition++) {
+    for(int partition = 1; partition < data.size(); partition++) {
       //partition marks first item in unsorted region
 
-      System.out.println( "\npartition: " + partition + "\tdataset:"); //diag
-      System.out.println( data );
+      System.out.println( "\npartition: " + partition + "\ndataset: "); //diag
+      System.out.print( data +"\n");
+
 
       //traverse sorted region from right to left
-      for(  ) {
+      for(int i=partition; i > 0; i--) {
 
         // "walk" the current item to where it belongs
         // by swapping adjacent items
-        if (  ) {
-
+        if (data.get(i).compareTo(data.get(i-1)) < 0) {
           System.out.println( "swap indices "+(i-1)+" & "+i+"..." ); //diag
 
+          Comparable currentleast = data.get(i);
+          Comparable origposition = data.get(i - 1);
+
+          data.set(i - 1, currentleast);
+          data.set(i, origposition);
         }
         else
           break;
@@ -107,7 +117,7 @@ public class InsertionSort
 
   public static void main( String [] args )
   {
-    /*===============for VOID methods=============
+      /*===============for VOID methods=============
       System.out.println("\n*** Testing sort-in-place (void) version... *** ");
       ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
@@ -123,9 +133,9 @@ public class InsertionSort
       System.out.println( "\nArrayList coco before sorting:\n" + coco );
       insertionSortV(coco);
       System.out.println( "\nArrayList coco after sorting:\n" + coco );
+
       ============================================*/
 
-    /*==========for AL-returning methods==========
       System.out.println( "*** Testing non-void version... *** " );
       ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
@@ -146,6 +156,8 @@ public class InsertionSort
       + cocoSorted );
       System.out.println( "\nArrayList coco after sorting:\n" + coco );
       System.out.println( coco );
+      /*==========for AL-returning methods==========
+
       ============================================*/
 
   }//end main
