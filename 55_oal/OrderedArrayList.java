@@ -69,7 +69,6 @@ public class OrderedArrayList
     return _data.size();
   }
 
-
   //pass-tru functionality
   /* -- get
   * Time complexity of O(1)
