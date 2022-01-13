@@ -1,3 +1,11 @@
+/*
+AllBread (Ivina Wang, Jacc Chen, Samantha Hua)
+APCS
+HW56: Turing Training Wheels
+2022-01-12
+time spent: 2 hrs
+*/
+
 /**
  * A program to carry on conversations with a human user.
  * This is the initial version that:
@@ -28,6 +36,18 @@ public class Magpie2
 	 *            the user statement
 	 * @return a response based on the rules given
 	 */
+	 /*
+	 		The chatbox will only return one response and this because all of the
+			keywords are searched for in the same for loop. So once the first keyword
+			is found, the rest of the keywords are ignored. We can prioritize certain
+			responses over others by putting them further up in the if statement.
+	 */
+	 /*
+	 		The problem is that certain words may be located inside other words that
+			take on different meanings. (ex: no inside know and mother inside smother)
+			The chatbox will return a response to the keyword inside the larger word which
+			sometimes make sense.
+	 */
 	public String getResponse(String statement)
 	{
 		statement = statement.trim();
@@ -36,7 +56,6 @@ public class Magpie2
 		if (statement.length() == 0) {
 			response = "Say something, I'm giving up on youuuuuu";
 		}
-		// if (trim(statement).)
 		else if (statement.indexOf("no") >= 0)
 		{
 			response = "Why so negative?";
@@ -51,15 +70,23 @@ public class Magpie2
 		else if (statement.indexOf("dog") >= 0
 				|| statement.indexOf("cat") >= 0)
 		{
-			response = "Tell me more about your pets";
+			response = "Tell me more about your pets. pspspspspsp";
 		}
 		else if (statement.indexOf("Mykolyk") >= 0)
 		{
 			response = "Ooo he is my teacher as well. isn't class always interesting?";
 		}
-		else if (statment.indexOf("Earth") >= 0)
+		else if (statement.indexOf("Earth") >= 0)
 		{
 			response = "Ah yes the blue marble";
+		}
+		else if (statement.indexOf("turtle") >= 0)
+		{
+			response = "sksksksksksksks";
+		}
+		else if (statement.indexOf("school") >= 0)
+		{
+			response = "-_-";
 		}
 		else
 		{

@@ -1,10 +1,18 @@
+/*
+AllBread (Ivina Wang, Jacc Chen, Samantha Hua)
+APCS
+HW56: Turing Training Wheels
+2022-01-12
+time spent: 2 hrs
+*/
+
 /**
  * A program to carry on conversations with a human user.
- * This version: 
+ * This version:
  * <ul><li>
- *    Uses advanced search for keywords 
- * </li></ul> 
- *    
+ *    Uses advanced search for keywords
+ * </li></ul>
+ *
  * @author Laurie White
  * @version April 2012
  */
@@ -12,7 +20,7 @@ public class Magpie3
 {
 	/**
 	 * Get a default greeting
-	 * 
+	 *
 	 * @return a greeting
 	 */
 	public String getGreeting()
@@ -22,7 +30,7 @@ public class Magpie3
 
 	/**
 	 * Gives a response to a user statement
-	 * 
+	 *
 	 * @param statement
 	 *            the user statement
 	 * @return a response based on the rules given
@@ -30,9 +38,8 @@ public class Magpie3
 	public String getResponse(String statement)
 	{
 		String response = "";
-		if (statement.length() == 0)
-		{
-			response = "Say something, please.";
+		if (statement.length() == 0) {
+			response = "Say something, I'm giving up on youuuuuu";
 		}
 		else if (findKeyword(statement, "no") >= 0)
 		{
@@ -44,6 +51,27 @@ public class Magpie3
 				|| findKeyword(statement, "brother") >= 0)
 		{
 			response = "Tell me more about your family.";
+		}
+		else if (findKeyword(statement, "dog") >= 0
+				|| findKeyword(statement, "cat") >= 0)
+		{
+			response = "Tell me more about your pets. pspspspspsp";
+		}
+		else if (findKeyword(statement, "Mykolyk") >= 0)
+		{
+			response = "Ooo he is my teacher as well. isn't class always interesting?";
+		}
+		else if (findKeyword(statement, "Earth") >= 0)
+		{
+			response = "Ah yes the blue marble";
+		}
+		else if (findKeyword(statement, "turtle") >= 0)
+		{
+			response = "sksksksksksksks";
+		}
+		else if (findKeyword(statement, "school") >= 0)
+		{
+			response = "-_-";
 		}
 		else
 		{
@@ -68,6 +96,7 @@ public class Magpie3
 	 * @return the index of the first occurrence of goal in
 	 *         statement or -1 if it's not found
 	 */
+
 	private int findKeyword(String statement, String goal,
 			int startPos)
 	{
@@ -122,7 +151,7 @@ public class Magpie3
 	 * is not a substring of a longer string (so, for
 	 * example, "I know" does not contain "no"). The search
 	 * begins at the beginning of the string.
-	 * 
+	 *
 	 * @param statement
 	 *            the string to search
 	 * @param goal
@@ -137,12 +166,12 @@ public class Magpie3
 
 	/**
 	 * Pick a default response to use if nothing else fits.
-	 * 
+	 *
 	 * @return a non-committal string
 	 */
 	private String getRandomResponse()
 	{
-		final int NUMBER_OF_RESPONSES = 4;
+		final int NUMBER_OF_RESPONSES = 6;
 		double r = Math.random();
 		int whichResponse = (int) (r * NUMBER_OF_RESPONSES);
 		String response = "";
@@ -162,6 +191,13 @@ public class Magpie3
 		else if (whichResponse == 3)
 		{
 			response = "You don't say.";
+		}
+		else if (whichResponse == 4)
+		{
+			response = "no lies detected";
+		}
+		else if (whichResponse == 5) {
+			response = "Excuse me?????";
 		}
 
 		return response;
