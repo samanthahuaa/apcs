@@ -106,10 +106,10 @@ public class StatPrinter
   //    isLocalMode(5) -> true
   // O(1) because the size of _frequency doesn't matter as it is only checking one index
    public boolean isLocalMode( int i )
-   { 
-      return (i > 0 
-             && i < _frequency.size() - 1 
-             && _frequency.get(i - 1) < _frequency.get(i) 
+   {
+      return (i > 0
+             && i < _frequency.size() - 1
+             && _frequency.get(i - 1) < _frequency.get(i)
              && _frequency.get(i) > _frequency.get(i + 1));
    }
 
@@ -132,7 +132,7 @@ public class StatPrinter
   //*************** QUESTION 05 **************************
   //precond:  longestBar > 0
   // O(n) because it depends on the size of data not the size of frequency
-  // This is because the method prints out an equal number of stars as the 
+  // This is because the method prints out an equal number of stars as the
   // size of data. Each star is only printed out once so the runtime efficiency is O(n)
   public void printHistogram( int longestBar )
   {
@@ -144,7 +144,7 @@ public class StatPrinter
       }
     System.out.println();
     }
-    
+
   }
 
 }//end class StatPrinter
