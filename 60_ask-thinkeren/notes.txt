@@ -1,0 +1,30 @@
+Samantha Hua
+APCS pd. 7
+HW60: A Termite is-a Turtle, a Thinker is-a Turtle
+2022-02-07
+time spent: 0.4 hrs
+
+Observables:
+ * Some turtles were confused on their job. This was impacted by the way other
+   turtles were misinforming other turtles. --> Create simple and easy to follow
+   tasks
+ * Many turtles were needed to properly execute the algorithm
+ * Some turtles forgot who had given them their cards which broke the algorithm
+
+DISCO:
+ * The instructions have to be simple and straight forward or turtles will get
+ confused
+ * The algo is only as strong as the weakest link. It only takes one turtle
+ who doesn't understand their job to mess up the whole process
+
+QCC:
+ * Is there a java equivalent for turtles in NetLogo?
+ * Does the fact that more turtles are being used decrease efficiency? (More
+ memory is needed)
+
+THINKER FIRMWARE:
+ * If you have one card, hand it back to the turtle who gave it to you
+ * If you have given and received two piles of cards, sort them.
+ * Sort cards using the specified algorithm where you continue to check the top
+ cards of both piles and compare them.
+ * Once sorted, give the cards back to the turtle who gave those cards to you.

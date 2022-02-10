@@ -49,6 +49,7 @@
    * Initially, what extra code do you need to get past compiler?
    **/
 
+import java.io.FileReader;
 import java.util.ArrayList;
 
 
@@ -64,10 +65,13 @@ public class StatPrinter
   //          _frequency.get(i) returns frequency of i in data
   //eg, for data [2,3,2,5,2,3]
   //  _frequency would be [0,0,3,2,0,1]
+  // O(n) because it depends on the size of data and iterates once
   public StatPrinter( ArrayList <Integer> data )
   {
-    /* YOUR IMPLEMENTATION HERE */
-    _frequency = new ArrayList<Integer>(max(data)+1);
+    _frequency = new ArrayList<Integer>();
+    for (int i = 0; i < data.size(); i++) {
+      _frequency.add(0);
+    }
     for (Integer integer : data) {
       _frequency.set(integer, _frequency.get(integer)+1);
     }
@@ -77,10 +81,11 @@ public class StatPrinter
   //*************** QUESTION 01 **************************
   //precond:  data.size() > 0
   //postcond: returns largest integer in data
+  // O(n) because it depends on the size of data and only iterates once
   public Integer max( ArrayList <Integer> data )
   {
-    int max = 0;
-    for (int i=0; i<data.size(); i++) {
+    Integer max = 0;
+    for (int i = 0; i < data.size() - 1; i++) {
       if (data.get(i) > max) {
         max = data.get(i);
       }
@@ -99,26 +104,47 @@ public class StatPrinter
   //    isLocalMode(0) -> false
   //    isLocalMode(1) -> true
   //    isLocalMode(5) -> true
-  // public boolean isLocalMode( int i )
-  // {
-  //   /* YOUR IMPLEMENTATION HERE */
-  // }
+  // O(1) because the size of _frequency doesn't matter as it is only checking one index
+   public boolean isLocalMode( int i )
+   {
+      return (i > 0
+             && i < _frequency.size() - 1
+             && _frequency.get(i - 1) < _frequency.get(i)
+             && _frequency.get(i) > _frequency.get(i + 1));
+   }
 
 
   //*************** QUESTION 04 **************************
   //postcond: returns list of modes in _frequency
-  // public ArrayList<Integer> getLocalModes()
-  // {
-  //   /* YOUR IMPLEMENTATION HERE */
-  //
-  // }
+  // O(n) because it iterates through frequency once
+  public ArrayList<Integer> getLocalModes()
+  {
+    ArrayList <Integer> localModes = new ArrayList<Integer>();
+    for (int i = 0; i < _frequency.size(); i++) {
+      if (isLocalMode(i)) {
+        localModes.add(_frequency.get(i));
+      }
+    }
+    return localModes;
+  }
 
 
   //*************** QUESTION 05 **************************
   //precond:  longestBar > 0
+  // O(n) because it depends on the size of data not the size of frequency
+  // This is because the method prints out an equal number of stars as the
+  // size of data. Each star is only printed out once so the runtime efficiency is O(n)
   public void printHistogram( int longestBar )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    int factor = longestBar / max(_frequency);
+    for (int i = 0; i < _frequency.size(); i++){
+      System.out.print(i + " : ");
+      for (int j = 0; j < _frequency.get(i) * factor; j++) {
+        System.out.print("*");
+      }
+    System.out.println();
+    }
+
   }
 
 }//end class StatPrinter

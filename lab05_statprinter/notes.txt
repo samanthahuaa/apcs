@@ -2,22 +2,38 @@ Rotating Cocoa (Perry Huang, Samantha Hua, Eric He)
 APCS pd7
 L05 -- pulling it together
 2022-02-03r
-time spent:  hrs
+time spent:  1 hr
 
 
 DISCO
 ------------------------------------------------
-* 
+* The size of data matters in the context of Big
+O because it directly impacts frequency, which
+is the array we iterate through to use most of our
+methods.
+* A local mode is a number that is greater than
+its neighboring values.
 ================================================
 
 
 QCC
 ------------------------------------------------
-*
+* Why is isLocalMode relevant and how can it be
+used for data interpretation?
+* Can big O be determined by a variable not specifically
+called in the method?
+(we think it can be and an example would be printHistogram method)
 ================================================
 
 
 MISC
 ------------------------------------------------
-*
+* Our big O definition and explanations are within
+StatPrinter.java on the last comment before the start
+of each method.
+* Our strategy for this lab was to attack the questions
+in a progressive manner so that they built on one another.
+Specifically this meant that we started with the max method
+and moved on to the overloaded constructer, isLocalMode,
+getLocalModes, and finished off with printHistogram.
 ================================================
