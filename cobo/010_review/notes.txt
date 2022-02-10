@@ -1,0 +1,20 @@
+Samantha Hua
+APCS pd. 7
+HW63: Read/Review/Expand
+2022-02-10
+time spent:
+
+1. a. sentimentVal( String word )
+   b. Yes, the parameter is a String. If you pass in a parameter that is not a
+   String, you will recieve an error about incompatible types.
+   c. The method returns a double.
+
+2. I tested the words "hot", "acceptable", and "terrible" which returned the
+values -0.33, -0.12, and -3.38, respectively.
+
+3. a. I think this would compile because sentimentVal() returns a double which
+is saved in the variable with a var type of double.
+   b. This would not compile because the variable word has a var type of String
+   which is incompatible with doubles
+   c. This would not compile because sentimentVal() only has one parameter but 
+   this line of code tries to send in two.
