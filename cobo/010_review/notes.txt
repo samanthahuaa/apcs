@@ -4,9 +4,10 @@ HW63: Read/Review/Expand
 2022-02-10
 time spent:
 
+==ACTIVITY 1==
 1. a. sentimentVal( String word )
    b. Yes, the parameter is a String. If you pass in a parameter that is not a
-   String, you will recieve an error about incompatible types.
+   String, you will receive an error about incompatible types.
    c. The method returns a double.
 
 2. I tested the words "hot", "acceptable", and "terrible" which returned the
@@ -19,8 +20,30 @@ is saved in the variable with a var type of double.
    c. This would not compile because sentimentVal() only has one parameter but
    this line of code tries to send in two.
 
-4. a. The way totalSentiment works is by turning the input file into a String
-and iterating through the string to remove any punctutation. It then looks at
+==ACTIVITY 2==
+4. The way totalSentiment works is by turning the input file into a String
+and iterating through the string to remove any punctuation. It then looks at
 each character within the string to determine if it is white space. If it is, it
 counts the sentimental value of the word that preceded the white space. This
 value is counted up using a counter which is returned.
+
+5. a. The ratings kind of make sense because they are based on the associated
+sentimentVal with the words used in the review but the length of the review also
+impacts the rating.
+   b. We could change the algorithm so that the totalSentiment value is by
+   FINISHHHHHHHH. Another way to change totalSentiment is
+   by forcing it to take the average of the sentiment value of the whole String.
+
+6. a. The error is that all of the boolean statements after totalSentiment < 15
+are included within the first boolean statement. Therefore, the code will never
+get past the first boolean statement and return 4 every time.
+   b. If the order of the boolean statements were reversed, this logical error
+   would be avoided.
+
+==ACTIVITY 3==
+3. indexOf returns the specific index of a particular character within a String.
+For example, in the String "hello," indexOf('h') would return 0. substring
+returns a part of a String. For example, substring(0,3) of "hello" would return
+"he." You must add 1 to the position of the space when copying the remainder of
+the String because substring(a,b) is inclusive of a but exclusive of b. Without
+adding 1, the remainder of the String would include the space at the first index.

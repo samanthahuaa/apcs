@@ -143,6 +143,7 @@ public class Review {
   /**
    * Randomly picks a negative adjective from the negativeAdjectives.txt file and returns it.
    */
+// Summarize your experience in your readme file.
   public static String randomNegativeAdj()
   {
     int index = (int)(Math.random() * negAdjectives.size());
@@ -164,7 +165,8 @@ public class Review {
   }
 
   // there is a weird error where a double with more than two decimal places
-  // is returned
+  // is returned --> seems like a issue with double subtraction --> tested with 
+  // other doubles and variables
   public static double totalSentiment(String filename) {
     String input = removePunctuation(textToString(filename));
     double counter = 0.0;
@@ -173,9 +175,24 @@ public class Review {
       if(Character.isWhitespace(input.charAt(i))){
         counter += sentimentVal(input.substring(lastIndexOfWord,i));
         lastIndexOfWord = i+1;
+        System.out.println(counter);
       }
     }
     return counter;
+  }
+
+  public static int starRating(String fileName) {
+    if (totalSentiment(fileName) < 0) {
+      return 1;
+    } else if (totalSentiment(fileName) < 5) {
+      return 2;
+    } else if (totalSentiment(fileName) < 10) {
+      return 3;
+    } else if (totalSentiment(fileName) < 15) {
+      return 4;
+    } else {
+      return 5;
+    }
   }
 
   public static void main(String[] args) {
