@@ -163,13 +163,31 @@ public class Review {
     }
   }
 
+  // there is a weird error where a double with more than two decimal places
+  // is returned
+  public static double totalSentiment(String filename) {
+    String input = removePunctuation(textToString(filename));
+    double counter = 0.0;
+    int lastIndexOfWord = 0;
+    for(int i=0; i < input.length(); i++){
+      if(Character.isWhitespace(input.charAt(i))){
+        counter += sentimentVal(input.substring(lastIndexOfWord,i));
+        lastIndexOfWord = i+1;
+      }
+    }
+    return counter;
+  }
+
   public static void main(String[] args) {
     // #1b
     // System.out.println(sentimentVal(5));
 
     // #2
-    System.out.println(sentimentVal("hot"));
-    System.out.println(sentimentVal("acceptable"));
-    System.out.println(sentimentVal("terrible"));
+    // System.out.println(sentimentVal("hot"));
+    // System.out.println(sentimentVal("acceptable"));
+    // System.out.println(sentimentVal("terrible"));
+
+    // #3
+    System.out.println(totalSentiment("SimpleReview.txt"));
   }
 }

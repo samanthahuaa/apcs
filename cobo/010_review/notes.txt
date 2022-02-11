@@ -16,5 +16,11 @@ values -0.33, -0.12, and -3.38, respectively.
 is saved in the variable with a var type of double.
    b. This would not compile because the variable word has a var type of String
    which is incompatible with doubles
-   c. This would not compile because sentimentVal() only has one parameter but 
+   c. This would not compile because sentimentVal() only has one parameter but
    this line of code tries to send in two.
+
+4. a. The way totalSentiment works is by turning the input file into a String
+and iterating through the string to remove any punctutation. It then looks at
+each character within the string to determine if it is white space. If it is, it
+counts the sentimental value of the word that preceded the white space. This
+value is counted up using a counter which is returned.
