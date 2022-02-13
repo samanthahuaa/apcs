@@ -1,4 +1,28 @@
+Rotating Cocoa (Samantha Hua, Perry Huang, Eric He)
+APCS pd. 7
+HW63: Read/Review/Expand
+2022-02-10
+time spent: 3 hours
+
 errata:
 
 * hashmap is java equivalent to the python dictionaries you know and love
 * nothing else should seem too unfamiliar to a Thinker
+
+DISCO
+------------------------------------------------
+* We discovered that charAt could be used to look at the first letter of a
+given String.
+* We realized that when comparing Characters, we do not need to use .equals. We
+can utilize ==. The implications of this are that Characters are stored in the
+same memory location.
+================================================
+
+QCC
+------------------------------------------------
+* Is there a faster way to remove certain letters from Strings? We used another
+String to slowly add to but feel like there could be a solution that is more
+efficient.
+* We found that certain adjectives didn't make sense in the context they were
+used in. (ex: The restaurant was savory) How can we ensure that the adjective
+used is always used correctly?

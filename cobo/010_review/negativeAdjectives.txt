@@ -1,3 +1,5 @@
 average
 cold
 raw
+salty
+bland

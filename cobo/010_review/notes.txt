@@ -1,8 +1,8 @@
-Samantha Hua
+Rotating Cocoa (Samantha Hua, Perry Huang, Eric He)
 APCS pd. 7
 HW63: Read/Review/Expand
 2022-02-10
-time spent:
+time spent: 3 hours
 
 ==ACTIVITY 1==
 1. a. sentimentVal( String word )
@@ -47,3 +47,97 @@ returns a part of a String. For example, substring(0,3) of "hello" would return
 "he." You must add 1 to the position of the space when copying the remainder of
 the String because substring(a,b) is inclusive of a but exclusive of b. Without
 adding 1, the remainder of the String would include the space at the first index.
+
+5. Static methods are not tied to specific instances of classes whereas
+non-static methods are. So when you call non-static methods, you must call them
+from an instance of a class.
+  ex: StatPrinter x = new StatPrinter(data);
+      x.max(); // x is the instance of the class. max() is the non-static method
+Alternatively, you can call static methods from any context
+  ex: max() // where max is a static method
+
+6. You can delete the randomness and encode it so that it only adds all positive
+or all negative adjectives.
+
+==ACTIVITY 4==
+1. You could generate bad reviews so that the other reviews look more authentic
+to a possible customer. They would see both sides of the conversation.
+
+2. You want to generate more business (make more money) and turn to creating
+fake reviews in order to do so.
+
+3. We could change the intensity of the adjectives (ex: happy --> joyous). This
+would make the reviews more passionate and intellectual. We could implement this
+by making a new file with only strong adjectives. We would call this file
+instead of the other randomly.
+
+5. The value of the variable is replaced by the first letter of the word.
+
+6. With the asterisk, the adjective will have no sentimentVal because it is not
+listed in the cleanSentiment.csv with the asterisk.
+
+7. Use stronger positive adjectives and alter the code so that you always get
+the positive adjectives.
+
+==ACTIVITY 5==
+1. We created a madLibs program because we thought it would be a fun way to
+implement skills we learned. Most notably, we learned about how to sort through
+data in other files. We utilized this to choose random parts of speech for our
+madLib.
+
+2. Our development process began with us first describing what we wanted to
+showcase in our program and possible ways to do so. Once settling on the
+madLib idea, we thought about what we needed to include to make the program come
+to life. This planning stage allowed us to quickly code our madLib.
+
+3. public static String announcement(double a)
+  We chose to make this method static because it is not dependent on any
+  instances of the madLib class. It takes in a variable with type double named
+  a because we knew that we would be passing in a random number.
+
+4. if (s.charAt(0) == 'E') {
+  return "Your character's name begins with a vowel!";
+} else {
+  return "womp womp womp your character's name does not begin with a vowel";
+}
+
+The above portion of code is checking the first character of the input to see if
+it is a vowel. If it is, it returns the first String and if not, it returns the
+second String.
+
+return s.length();
+
+This piece of code returns the length of the given String.
+
+5. if (s.charAt(0) == 'E') {
+  return "Your character's name begins with a vowel!";
+} else {
+  return "womp womp womp your character's name does not begin with a vowel";
+}
+
+One way to rewrite this conditional is to write the following:
+if (!s.charAt(0) == 'E') {
+  return "womp womp womp your character's name does not begin with a vowel";
+} else {
+  return "Your character's name begins with a vowel!";
+}
+
+6.
+ Scanner input = new Scanner(new File("madName.txt"));
+ while(input.hasNextLine()){
+   String temp = input.nextLine().trim();
+   names.add(temp);
+ }
+
+We used iteration to go through the input files and string-ify them. The code
+iterated through each line of the text file in order to read all of the data
+stored in that file.
+
+An alternative to this piece of code is to do:
+for (int i=0; input.hasNextLine() == false; i++) {
+  String temp = input.nextLine().trim();
+  names.add(temp);
+}
+
+In this scenario, the value of i is irrelevant and not used but it represents
+the number of lines this file has and is critical in implementing the for loop.
