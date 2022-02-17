@@ -1,0 +1,12 @@
+Team Rotating Cocoa (Perry Huang, Samantha Hua, Eric He)
+APCS
+HW65 -- How Many Queens Can a Thinker Place, If a Thinker Can Place Queens...
+2022-02-16
+time spent: 2.5 hrs
+
+DISCO
+* /n and /t are viewed as 1 character.
+* We can use charAt and string manipulation to generate a board that correctly displays queens and non-queens.
+QCC
+* Why are the right cells not being looked at in our code?
+* We didn't have enough time to finish the homework.
