@@ -91,35 +91,43 @@ class TourFinder
   //constructor -- build board of size n x n
   public TourFinder( int n )
   {
-    _sideLength = n+4;
+    _sideLength = n;
 
     //init 2D array to represent square board with moat
-    _board = new int[_sideLength][_sideLength];
+    _board = new int[_sideLength+4][_sideLength+4];
 
     //SETUP BOARD --  0 for unvisited cell
     //               -1 for cell in moat
     //---------------------------------------------------------
     // rows 2 to n+2 are iterated through. the first two and the last two columns
     // become -1
-    // for (int r = 2; r< n+2; r++) {
-    //   // iterates through the first two rows
-    //   for (int c = 0; c < _sideLength; c++) {
-    //     if (c == 0 || c == 1 || c == n+2 || c == n+3) {
-    //       _board[r][c] = -1;
-    //     }
-    //   }
-    // }
-    //
-    // // moat on the left and right
-    //
-    // // moat for the bottom two rows
-    // for (int r = n+1; r < _sideLength; r++) {
-    //   // iterates through the first two rows
-    //   for (int c = 0; c < _sideLength; c++) {
-    //     // iterates through all of the columns
-    //     _board[r][c] = -1;
-    //   }
-    // }
+    for (int r = 0; r < 2; r++) {
+      // iterates through the first two rows
+      for (int c = 0; c < _sideLength+4; c++) {
+        // iterates through all of the columns
+        _board[r][c] = -1;
+      }
+    }
+
+    // moat on the left and right
+    for (int r = 2; r< n+2; r++) {
+      // iterates through the first two rows
+      for (int c = 0; c < _sideLength+4; c++) {
+        if (c == 0 || c == 1 || c == n+2 || c == n+3) {
+          _board[r][c] = -1;
+        }
+      }
+    }
+
+
+    // moat for the bottom two rows
+    for (int r = n+2; r < _sideLength+4; r++) {
+      // iterates through the first two rows
+      for (int c = 0; c < _sideLength+4; c++) {
+        // iterates through all of the columns
+        _board[r][c] = -1;
+      }
+    }
     //---------------------------------------------------------
 
   }//end constructor
@@ -138,7 +146,7 @@ class TourFinder
     int i, j;
     for( i=0; i < _sideLength+4; i++ ) {
       for( j=0; j < _sideLength+4; j++ )
-        retStr = retStr + String.format( "%3d", _board[j][i] );
+        retStr = retStr + String.format( "%3d",  _board[j][i] );
       //"%3d" allots 3 spaces for each number
       retStr = retStr + "\n";
     }
