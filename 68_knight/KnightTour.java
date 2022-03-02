@@ -2,7 +2,7 @@
 // APCS pd7
 // HW68 -- recursively probing for a closed cycle
 // 2022-02-28m
-// time spent:  hrs
+// time spent: 2.5 hrs
 
 /***
  * SKELETON
@@ -15,7 +15,14 @@
  * $ java KnightTour [N]
  *
  * ALGO
- *
+ * Place a knight at the starting position and try to move it to another position
+ (the next position is determined by the counterclockwise order starting from the
+ bottom right). After each move, the function recurses itself in the 8 different
+ positions that the knight can be in next. If the knight reaches a position
+ where there are no other places to go, the method is returned which backtracks
+ it to the position before it. If the knight reaches a position where the
+ number of moves is equal to the area of the board and the position it is on is
+ valid, the animation is stopped and the method terminates.
  * DISCO
  * By having the methods return without a boolean, we are able to remove the
  usage of if statements and boolean expressions to check whether a tour is
@@ -24,17 +31,19 @@
  what the function can do, how it's used, ways to alter/specify your command,
  and is overall very helpful in trying to understand a new command.
   ex: man time
-
+ *
  * QCC
  * We edited the skeleton to combine the animation stopping and the returning.
  Is there a benefit to seperating the two processes?
- *
+ * How can we increase the efficency of this algorithm?
+ * n=7 and n=8 took a very VERY long time (we had to stop midway because of how
+ long it was taking)
  *
  * Mean execution times for boards of size n*n:
  * n=5   .2054s    across 10 executions
  * n=6   2.7166s    across 10 executions
- * n=7   __s    across __ executions
- * n=8   __s    across __ executions
+ * n=7   14m 29.416s    across 1 execution
+ * n=8   5m 18.73s    across 1 execution
  *
  * POSIX PROTIP: to measure execution time from BASH, use time program:
  * $ time java KnightTour 5
