@@ -59,14 +59,14 @@ public class KnightTour
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     //for fixed starting location, use line below:
-    // tf.findTour( 2, 2, 1 );
+    tf.findTour( 2, 2, 1 );
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     //for random starting location, use lines below:
-    int startX = (int) Math.random() * n;
-    int startY = (int) Math.random() * n;
-    tf.findTour( startX, startY, 1 );   // 1 or 0 ?
+    // int startX = (int) Math.random() * n;
+    // int startY = (int) Math.random() * n;
+    // tf.findTour( startX, startY, 1 );   // 1 or 0 ?
     // We said it would be 8 so that we know how many knights are on the board
     // at a time
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -101,25 +101,25 @@ class TourFinder
     //---------------------------------------------------------
     // rows 2 to n+2 are iterated through. the first two and the last two columns
     // become -1
-    for (int r = 2; r<= n+2; r++) {
-      // iterates through the first two rows
-      for (int c = 0; c < _sideLength; c++) {
-        if (c == 0 || c == 1 || c == n+2 || c == n+3) {
-          _board[r][c] = -1;
-        }
-      }
-    }
-
-    // moat on the left and right
-
-    // moat for the bottom two rows\
-    for (int r = n+2; r<= _sideLength; r++) {
-      // iterates through the first two rows
-      for (int c = 0; c < _sideLength; c++) {
-        // iterates through all of the columns
-        _board[r][c] = -1;
-      }
-    }
+    // for (int r = 2; r< n+2; r++) {
+    //   // iterates through the first two rows
+    //   for (int c = 0; c < _sideLength; c++) {
+    //     if (c == 0 || c == 1 || c == n+2 || c == n+3) {
+    //       _board[r][c] = -1;
+    //     }
+    //   }
+    // }
+    //
+    // // moat on the left and right
+    //
+    // // moat for the bottom two rows
+    // for (int r = n+1; r < _sideLength; r++) {
+    //   // iterates through the first two rows
+    //   for (int c = 0; c < _sideLength; c++) {
+    //     // iterates through all of the columns
+    //     _board[r][c] = -1;
+    //   }
+    // }
     //---------------------------------------------------------
 
   }//end constructor
@@ -172,24 +172,24 @@ class TourFinder
     //delay(50); //slow it down enough to be followable
 
     //if a tour has been completed, stop animation
-    if ( ??? ) System.exit(0);
-
-    //primary base case: tour completed
-    if ( ??? ) {
-      ???
-      System.out.println( this ); //refresh screen
-      return;
-    }
-    //other base case: stepped off board or onto visited cell
-    if ( ??? ) {
-      return;
-    }
+    // if ( ??? ) System.exit(0);
+    //
+    // //primary base case: tour completed
+    // if ( ??? ) {
+    //   ???
+    //   System.out.println( this ); //refresh screen
+    //   return;
+    // }
+    // //other base case: stepped off board or onto visited cell
+    // if ( ??? ) {
+    //   return;
+    // }
     //otherwise, mark current location
     //and recursively generate tour possibilities from current pos
-    else {
+    // else {
 
       //mark current cell with current move number
-      _board[x][y] = ???
+      // _board[x][y] = ???
 
       System.out.println( this ); //refresh screen
 
@@ -204,14 +204,14 @@ class TourFinder
        *     g . . . b
        *     . h . a .
       ******************************************/
-      ???
+      // ???
 
       //If made it this far, path did not lead to tour, so back up...
       // (Overwrite number at this cell with a 0.)
-        ???
+        // ???
 
       System.out.println( this ); //refresh screen
-    }
+    // }
   }//end findTour()
 
 }//end class TourFinder
