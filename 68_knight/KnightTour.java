@@ -17,12 +17,22 @@
  * ALGO
  *
  * DISCO
- *
+ * By having the methods return without a boolean, we are able to remove the
+ usage of if statements and boolean expressions to check whether a tour is
+ finished.
+ * man [COMMAND] allows you to see the manual of any command in terminal. It shows you
+ what the function can do, how it's used, ways to alter/specify your command,
+ and is overall very helpful in trying to understand a new command.
+  ex: man time
+
  * QCC
+ * We edited the skeleton to combine the animation stopping and the returning.
+ Is there a benefit to seperating the two processes?
+ *
  *
  * Mean execution times for boards of size n*n:
- * n=5   __s    across __ executions
- * n=6   __s    across __ executions
+ * n=5   .2054s    across 10 executions
+ * n=6   2.7166s    across 10 executions
  * n=7   __s    across __ executions
  * n=8   __s    across __ executions
  *
@@ -179,17 +189,12 @@ class TourFinder
   {
     // delay(50); //slow it down enough to be followable
 
-    // if a tour has been completed, stop animation
+    //primary base case: tour completed
     if ( moves == _sideLength*_sideLength && _board[x][y] == 0) {
       _board[x][y] = moves;
       System.out.println( this ); //refresh screen
+      // if a tour has been completed, stop animation
       System.exit(0);
-    }
-
-    //primary base case: tour completed
-    if ( moves == _sideLength * _sideLength && _board[x][y] == 0) {
-      _board[x][y] = moves;
-      System.out.println( this ); //refresh screen
       return;
     }
 
