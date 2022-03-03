@@ -1,0 +1,33 @@
+Team PigeonHaters // Nina Jiang, Samantha Hua, Nada Hameed
+APCS07
+HW69--Making Sense
+03-02-21
+Time spent:
+
+In a plaintext file with proper heading and a reprinting of your Knight’s Tour execution time measurements, respond to each prompt below.
+    n = 5       26.711s
+    n = 6       9min 20.467s
+    n = 7       14min 56s
+    n = 8       15m 12.3s
+
+q0: From any starting position, can an open tour always be found? Explain.
+    When a solution does exist, an open tour can always be found because open tours have less restrictions than closed tours.
+
+q1: Same, but for closed tour.
+    When a solution does exist, a closed tour can not always be found because a closed tour can only end on a space that allows the knight
+    to make one knight's move to return to its starting position.
+
+q2: How do you explain the increase in execution time as n increases?
+    An increase in n leads to an increase in the number of possible moves and backtracks the knight must make to reach an solution, which
+    results in an increase execution time.
+
+q3: Thoughts on optimization?
+    The corners of the board could be checked first because there are less ways for a knight to visit the corners compared to any other
+    space on the board. There are only two paths to reach the corners via a knight's path and if they are already taken, the knight will
+    not be able to reach that space. Therefore we can eliminate the need to run through extra branches, and save time.
+
+State your cleanest algo for finding your way out of a maze (of the “2D” style discussed in class).
+    Similar to KnightTour, we would check if there are available moves from the current position of the hero with left side preference clockwise.
+    We would only need a moat of depth 1 since the hero would only move 1 space at a time. If the hero reaches a dead end, it would backtrack and
+    reset the '.' to '#'. There are only 4 recursive calls since the hero can only move horizontally or vertically. The program ends when the hero
+    reaches the space marked with '$'.
