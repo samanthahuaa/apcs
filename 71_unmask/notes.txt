@@ -1,0 +1,15 @@
+* DISCO
+* The @ symbol signifies things that are not part of the code but is
+* highlighted so to better explain parts of code or important stuff.
+*
+* QCC
+* There is a controversy within the group about whether the size of
+* the numbers used in the arrays for Mysterion affect its efficacy.
+*
+* q0: What does it do?
+* a0: Nothing to numbers that have a big difference (some members do not agree)
+* Some members think that the order of the numbers affect the outcome.
+*
+* q1: O(?)
+* a1: O(n) but we aren't sure because the algorithm is more dependent on a, b,
+* and c than the size of the array.
