@@ -3,7 +3,7 @@ TNPG: Hot Cake: Samantha Hua + Poppy, Nada Hameed + Ray, Ariel Fuchs + Skelly Du
 APCS pd07
 HW75 - Nodal Recall
 2022-03-014m
-time spent:
+time spent: 1 hr.
 **/
 
 /***
@@ -105,7 +105,7 @@ public class LLNode
     System.out.println(first);
     System.out.println(first);
     System.out.println(first);
-    
+
     /* A naive list traversal, has side effects.... ??
        while( first != null ) {
        System.out.println( first );
