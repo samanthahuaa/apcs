@@ -1,3 +1,9 @@
+// Maine Lobsters: Samantha Hua, Ruby Friedman, Nada Hameed
+// APCS
+// L07: But These Go Up To Eleven
+// 2022-03-20
+// time spent: 5 hrs.
+
 /**
  * Card.java
  *

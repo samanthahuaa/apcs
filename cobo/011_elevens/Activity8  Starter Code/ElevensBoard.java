@@ -1,3 +1,9 @@
+// Maine Lobsters: Samantha Hua, Ruby Friedman, Nada Hameed
+// APCS
+// L07: But These Go Up To Eleven
+// 2022-03-20
+// time spent: 5 hrs.
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -53,7 +59,7 @@ public class ElevensBoard extends Board {
 	 */
 	@Override
 	public boolean isLegal(List<Integer> selectedCards) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+		return (containsPairSum11(selectedCards) || containsJQK(selectedCards))
 	}
 
 	/**
@@ -66,7 +72,20 @@ public class ElevensBoard extends Board {
 	 */
 	@Override
 	public boolean anotherPlayIsPossible() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+		List<Integer> cards;
+
+		for (int counter = 0; counter < (BOARD_SIZE-1); counter++) {
+			cards.add(counter);
+			cards.add(counter+1);
+
+			if (isLegal(cards) == true) {
+				return true;
+			}
+
+			cards.remove();
+			cards.remove();
+		}
+		return false;
 	}
 
 	/**
@@ -78,7 +97,15 @@ public class ElevensBoard extends Board {
 	 *              contain an 11-pair; false otherwise.
 	 */
 	private boolean containsPairSum11(List<Integer> selectedCards) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+		int sum = 0;
+		for (int i = 0; i < selectedCards.length; i++) {
+			sum += POINT_VALUES[i];
+		}
+		if (sum == 11) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/**
@@ -90,6 +117,20 @@ public class ElevensBoard extends Board {
 	 *              include a jack, a queen, and a king; false otherwise.
 	 */
 	private boolean containsJQK(List<Integer> selectedCards) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+		int jackCounter = 0;
+		int queenCounter = 0;
+		int kingCounter = 0;
+		for (int i = 0; i < selectedCards.length; i++) {
+			if (RANKS[selectedCards0] == "jack") {
+				jackCounter++;
+			}
+			else if (RANKS[selectedCards0] == "queen") {
+				queenCounter++;
+			}
+			else if (RANKS[selectedCards0] == "king") {
+				kingCounter++;
+			}
+		}
+		return (jackCounter==1 && queenCounter==1 & kingCounter==1);
 	}
 }
