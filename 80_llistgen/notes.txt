@@ -1,0 +1,16 @@
+Hot Cake: Ariel, Nada, Samantha
+HW80:Generically Speaking
+APCS
+HW 80_Generally Speaking" made DLLNode work for all object types.
+2022-03-23
+time spent: 0.4 hrs
+
+discos
+- T is the convention for a input type we do not know. (T stands for type)
+- T can be referenced as an input type even though we don't know what it is
+- T does not get set to a value because it is not a variable, it is an input type
+
+QCC:
+-If we can generalize why would we want to specify an input type for a method?
+-What are some of the benefits for specifying an input type?
+-How do we determine which is better in each scenario?
