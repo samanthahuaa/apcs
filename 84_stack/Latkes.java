@@ -56,12 +56,17 @@ public class Latkes
   public String pop( )
   {
     if (isEmpty() == true) return "The stack is empty";
+    String blah = _stack[_stackSize - 1];
     _stack[_stackSize - 1] = null;
     _stackSize--;
-    return "Success!";
+    return blah;
   }// O(1) because the algo does not iterate through the stack. it just removes a
   // new element to the end
 
+  public String peek() {
+    if (isEmpty()) return "full";
+    return _stack[_stackSize - 1];
+  }
 
   //chk for emptiness
   public boolean isEmpty()
