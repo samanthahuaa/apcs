@@ -1,6 +1,21 @@
 TNPG: Maine Lobster (Ruby Friedman + Tony, Samantha Hua + Poppy, Nada Hameed + Ray)
 APCS pd07
 
+DISCO
+	- Object.connect("<LINK>").load() allows you to connect to outside/online data sources.
+	
+
+QCC
+
+
+<TNPG>'s CSV FLOW:
+<insert your description of your tools and workflow in creating, editing CSV files>
+
+
+TRUBZ
+<this lab involves using tools that are likely to introduce hiccups; log any troubleshooting issues here>
+
+
 Activity 1:
 
 1. Piazza, CS Assignments Page, Google Classroom
@@ -15,7 +30,7 @@ Activity 1:
 10. Third party services or feedback/rating form
 11. We accept cookies to gain access to certain websites’ data. The websites’ data is more important than personal privacy.
 
-Activity 2: 
+Activity 2:
 
 1. Cereal
 2. Which cereal has the lowest number of calories?

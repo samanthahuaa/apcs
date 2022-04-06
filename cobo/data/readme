@@ -1,16 +1,47 @@
-data sets:
+TNPG: Maine Lobster (Ruby Friedman + Tony, Samantha Hua + Poppy, Nada Hameed + Ray)
+APCS pd07
 
-§ http://www.kaggle.com
-§ http://www.data.gov
-§ https://toolbox.google.com/datasetsearch
+Activity 1:
 
+1. Piazza, CS Assignments Page, Google Classroom
+2. Piazza: Services you use, uploads or posts to the services, account registration
+3. Delimited means separated by barriers, like a spreadsheet. It allows us to distinguish data.
+4. You can run cases that are specific to that type, or print it and interpret it for yourself.
+5. Cooking, jewelry-making
+6. (We need questions that are not easy to answer, questions that we can test to find the answer for)
+7. Emotional consequences, level of difficulty
+8. A larger data set with more records can allow you to store more DATA and run more tests and come up with more concrete results.
+9. Collected user data could help advertisements cater toward the user’s interests.
+10. Third party services or feedback/rating form
+11. We accept cookies to gain access to certain websites’ data. The websites’ data is more important than personal privacy.
 
-To make a JAR available to runtime environment (JRE)...
+Activity 2:
 
-```
-$ javac -classpath .:path/to/sinbad.jar -d . Driver.java
-$ java -classpath .:path/to/sinbad.jar Driver
-```
+1. Cereal
+2. Which cereal has the lowest number of calories?
+3. public class Cereal
+4. 2
+5. brand -> String, calNumber -> int
+8. Which cereals have the same number of calories?
+9. Which cereal has the highest vitamin levels?
+10. We could add a new instance variable called vitLvl and then use that to compare to other cereal brands.
 
-411 on sinbad 
-https://berry-cs.github.io/sinbad/install-java
+Activity 3:
+
+1. Atlanta, Hartsfield - Jackson Atlanta International Airport, GA is 65.0F
+2. KART -> Watertown, Watertown International Airport, NY is 52.0F
+4. 48
+5. We could filter the stations by state.
+6. Pago Pago
+7. Which state has the most weather stations?
+8. Not a lot, you just have to traverse with a for loop.
+
+Activity 4:
+1. What is the lowest avocado prices have ever been?
+2. The name of the data set is avocado prices.
+3. We first looked through the data sets to see what data sets interests us. Upon deciding on a data set to move forward with, we thought of how to manipulate the data to answer a related question, and then, using Cereal.java as a sort of reference, we wrote code that would answer our question based on our data set.
+4. public class Avocado
+	instance variables: String date, double AveragePrice, String type, int year, String region, int TotalVolume
+5. ArrayList<AvocadoPrices> allstns = ds.fetchList("AvocadoPrices", "avocado/date"
+       "avocado/averagePrice", "avocado/type",
+       "avocado/year", "avocado/region", "avocado/volume");
