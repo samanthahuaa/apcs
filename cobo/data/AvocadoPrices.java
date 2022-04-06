@@ -11,9 +11,13 @@ public class AvocadoPrices {
       this.AveragePrice = AveragePrice;
       this.type = type;
       this.year = year;
-      this.Region = region;
+      this.Region = Region;
       this.TotalVolume = TotalVolume;
    }
+
+	public String getYear() {
+ 		return "" + year;
+ 	}
 
 	public double getAveragePrice() {
 		return AveragePrice;
