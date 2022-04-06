@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Avocados {
    public static void main(String[] args) {
-      DataSource ds = DataSource.connect("https://www.kaggle.com/datasets/neuromusic/avocado-prices/download").load();
-      ArrayList<AvocadoPrices> allstns = ds.fetchList("AvocadoPrices", "avocado/date", "avocado/averagePrice", "avocado/type", "avocado/year", "avocado/region", "avocado/volume");
+      DataSource ds = DataSource.connect("https://raw.githubusercontent.com/samanthahuaa/apcs/main/cobo/data/avocado.csv").load();
+      ArrayList<AvocadoPrices> allstns = ds.fetchList("AvocadoPrices", "AvocadoPrices/Date", "AvocadoPrices/AveragePrice", "AvocadoPrices/type", "AvocadoPrices/year", "AvocadoPrices/region", "AvocadoPrices/volume");
       System.out.println("Total avocado datapoints: " + allstns.size());
 
       Scanner sc = new Scanner(System.in);
