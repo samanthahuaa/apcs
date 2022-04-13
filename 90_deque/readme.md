@@ -24,3 +24,8 @@ IMPLEMENTED:
 NOT YET IMPLEMENTED:
 1. void clear() - seems useful for resetting the deque
 2. Object[]	toArray() - seems useful for implementation of deque in a broader context
+
+DESIGN CHOICES:
+ - We chose to implement Deque using LinkedList because we thought it would be
+ easiest. This decision was also based on time complexity. As noted in class, for
+ ArrayList, for enqueue or dequeue to be constant time, a lot of memory is required. 

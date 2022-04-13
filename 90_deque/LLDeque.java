@@ -8,12 +8,12 @@ time spent: 0.7hrs
 
 import java.util.LinkedList;
 
-public class YourImplementationOfDeque<ORANGE> implements Deque<ORANGE>{
+public class LLDeque<ORANGE> implements Deque<ORANGE>{
 
   // inst vars
   LinkedList<ORANGE> _deque;
 
-  public YourImplementationOfDeque() {
+  public LLDeque() {
     _deque = new LinkedList<ORANGE>();
   }
 
@@ -68,43 +68,11 @@ public class YourImplementationOfDeque<ORANGE> implements Deque<ORANGE>{
     return false;
   } // O(n)
 
-  public static void main(String[] args) {
-    // adding at the back and removing at the front
-    // after adding --> 12345
-    // should print out 12345 null
-    YourImplementationOfDeque<Integer> hotCakes = new YourImplementationOfDeque<Integer>();
-    hotCakes.addLast(1);
-    hotCakes.addLast(2);
-    hotCakes.addLast(3);
-    hotCakes.addLast(4);
-    hotCakes.addLast(5);
-    System.out.println("finished adding");
+  public void clear() {
+    for (int i=0; i <= _deque.size(); i++) {
+      _deque.removeFirst();
+    }
+    return;
+  } // O(n)
 
-    System.out.println(hotCakes.removeFirst());
-    System.out.println(hotCakes.removeFirst());
-    System.out.println(hotCakes.removeFirst());
-    System.out.println(hotCakes.removeFirst());
-    System.out.println(hotCakes.removeFirst());
-    System.out.println(hotCakes.removeFirst());
-    System.out.println("finished dequeuing no more cake");
-
-    // adding at the front and removing from the back
-    // after adding --> 54321
-    // should print out 12345 null
-    YourImplementationOfDeque<Integer> hotterCake = new YourImplementationOfDeque<Integer>();
-    hotCakes.addFirst(1);
-    hotCakes.addFirst(2);
-    hotCakes.addFirst(3);
-    hotCakes.addFirst(4);
-    hotCakes.addFirst(5);
-    System.out.println("finished adding");
-
-    System.out.println(hotCakes.removeLast());
-    System.out.println(hotCakes.removeLast());
-    System.out.println(hotCakes.removeLast());
-    System.out.println(hotCakes.removeLast());
-    System.out.println(hotCakes.removeLast());
-    System.out.println(hotCakes.removeLast());
-    System.out.println("finished dequeuing no more cake");
-  }
 }

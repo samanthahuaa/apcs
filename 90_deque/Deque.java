@@ -35,4 +35,8 @@ public interface Deque<ORANGE>{
   // removes the element at the end of the deque
   public ORANGE removeLast();
 
+  // removes all elements in the Deque
+  // public void clear();
+
+
 }
