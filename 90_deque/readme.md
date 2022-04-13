@@ -8,7 +8,8 @@ HW 90 -- our implementation of deque
 
 time spent: 0.7hrs
 
-prioritized to-do list:
+
+**prioritized to-do list:
 
 IMPLEMENTED:
 1. int size() - easy to write
