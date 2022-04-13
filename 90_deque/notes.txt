@@ -1,0 +1,16 @@
+/**
+TNPG: Hot Cake (Ariel Fuchs + Skelly Ducker, Samantha Hua + Poppy, Nada Hameed + Ray)
+APCS pd07
+HW 90 -- our implementation of deque
+2022-04-13
+time spent: 0.7hrs
+
+DISCO:
+ - We implemented this like a wrapper class and used a lot of the functionality
+ provided by LinkedList
+ - Having a plan is very important. Without it we would be lost ducklings.
+
+QCC:
+ - When would it be preferable to use ArrayList instead of LinkedList?
+ - Would we ever need to have some sort of capacity limit for a deque? (We implemented it without capacity)
+**/
