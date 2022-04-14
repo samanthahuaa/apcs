@@ -1,8 +1,26 @@
-/**
+TNPG: Hot Cake (Ariel Fuchs + Skelly Ducker, Samantha Hua + Poppy, Nada Hameed + Ray)
+APCS pd07
+HW91: Deque the Halls
+2022-04-13
+time spent: 0.8hrs
+
+DISCO:
+ - Initially, our clear() algo was O(n) because we had a for loop going through
+ the entire Deque and removed an element one by one. However, we realized we could
+ improve the effeciency of the method by simply pointing _deque to a new LinkedList
+
+QCC:
+ - We originally tried to write a toArray() method before realizing it wasn't really
+ a part of the Deque fxnality. However, we encounter error regarding our generalization
+ of an array (ex: ORANGE[]). Our error message was "error: generic array creation." What
+ does this mean and why can't we generalize arrays?
+
+--------------------
+
 TNPG: Hot Cake (Ariel Fuchs + Skelly Ducker, Samantha Hua + Poppy, Nada Hameed + Ray)
 APCS pd07
 HW 90 -- our implementation of deque
-2022-04-13
+2022-04-12
 time spent: 0.7hrs
 
 DISCO:
@@ -13,4 +31,3 @@ DISCO:
 QCC:
  - When would it be preferable to use ArrayList instead of LinkedList?
  - Would we ever need to have some sort of capacity limit for a deque? (We implemented it without capacity)
-**/

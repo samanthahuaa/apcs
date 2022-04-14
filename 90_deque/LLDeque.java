@@ -1,6 +1,12 @@
 /**
 TNPG: Hot Cake (Ariel Fuchs + Skelly Ducker, Samantha Hua + Poppy, Nada Hameed + Ray)
 APCS pd07
+HW91: Deque the Halls
+2022-04-13
+time spent: 0.8hrs
+
+TNPG: Hot Cake (Ariel Fuchs + Skelly Ducker, Samantha Hua + Poppy, Nada Hameed + Ray)
+APCS pd07
 HW 90 -- our implementation of deque
 2022-04-13
 time spent: 0.7hrs
@@ -69,10 +75,8 @@ public class LLDeque<ORANGE> implements Deque<ORANGE>{
   } // O(n)
 
   public void clear() {
-    for (int i=0; i <= _deque.size(); i++) {
-      _deque.removeFirst();
-    }
+    _deque = new LinkedList<ORANGE>();
     return;
-  } // O(n)
+  } // O(1)
 
 }

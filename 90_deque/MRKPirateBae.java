@@ -1,3 +1,11 @@
+/**
+TNPG: Hot Cake (Ariel Fuchs + Skelly Ducker, Samantha Hua + Poppy, Nada Hameed + Ray)
+APCS pd07
+HW91: Deque the Halls
+2022-04-13
+time spent: 0.8hrs
+**/
+
 public class MRKPirateBae {
   public static void main(String[] args) {
     // adding at the back and removing at the front
