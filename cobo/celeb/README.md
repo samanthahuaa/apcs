@@ -1,4 +1,4 @@
-Hot Cake: Ariel, Samantha, Nada
+Non-Rogue AI: Ariel, Samantha, Nada
 
 To Do List:
 1. ~Celebrity Class~
