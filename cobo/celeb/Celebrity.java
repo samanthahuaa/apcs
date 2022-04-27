@@ -1,3 +1,5 @@
+// Non-Rogue AI (Samantha Hua, Ariel Fuchs, Nada Hameed)
+
 /**
  * Celebrity base class for the Celebrity game.
  * @author cody.henrichsen

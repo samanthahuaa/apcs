@@ -1,3 +1,5 @@
+// Non-Rogue AI (Samantha Hua, Ariel Fuchs, Nada Hameed)
+
 /**
  * Starts the Celebrity Game application
  * @author cody.henrichsen

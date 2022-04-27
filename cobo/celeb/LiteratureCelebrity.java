@@ -1,3 +1,5 @@
+// Non-Rogue AI (Samantha Hua, Ariel Fuchs, Nada Hameed)
+
 import java.util.ArrayList;
 
 /**

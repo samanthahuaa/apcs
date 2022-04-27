@@ -1,0 +1,21 @@
+Non-Rogue AI (Samantha Hua, Ariel Fuchs, Nada Hameed)
+APCS
+L09: Some Folks Call It A Charades
+2022-04-27
+time spent: 6hrs.
+
+DISCO:
+  - Listeners in Java reminded me of listeners in JS as they can be used to track
+  user interaction in the GUI
+  - Having repeatable code makes it easy to expand your program. (ex: Literature was similar
+  to Movie)
+  - [related to the disco above] breaking down a program into smaller, repeatable
+  parts makes it easier to code and understand when reading it over
+  - .equalsIgnoreCase is utilized when you don't care about upper/lower case between the two
+  things you are comparing
+
+QCC:
+  - celebrityRadio.addActionListener(select -> clueLabel.setText(celebrityClue));
+      In the above line of code a "->" is used. What does it do and how was it used here?
+  - We're not really sure about how the timer was implemented
+  - We did not have time to complete Activity 5
