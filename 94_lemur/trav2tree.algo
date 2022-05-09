@@ -1,0 +1,116 @@
+Hot Cake : Nada Hameed, Samantha Hua, Ariel Fuchs
+APCS pd7
+HW94 -- reverse engineering
+2022-05-06f
+time spent: 1hr
+
+
+DISCO
+------------------------------------------------
+* We found that the algorithm to reconstructing a binary tree can be recursive.
+We broke it down into two branches until we were looking at one node in a branch
+* every tree has only one specific traversal regardless of the type of traversal.
+but some traversals (pre-order and post-order) can have more than one unique tree.
+================================================
+
+
+QCC
+------------------------------------------------
+* We think the algorithm we came up with can work with just pre-order and in-order
+OR in-order and post-order but in those scenarios, it could produce more than one
+unique tree.
+* we think that "onto" can be used to describe the way some traversals
+map out to more than one unique tree while "1-to-1" can be used to describe one
+traversal mapping to one unique tree.
+* we also think that "onto" can be related to how a tree has more than one child
+(since trees grow downward, that would mean the parent is pointing to more than
+one path), and "1-to-1" can be related to a parent with only one child (meaning
+it's only pointing to one path).
+================================================
+
+
+HOW KEEN ARE YOUR POWERS OF OBSERVATION?
+------------------------------------------------
+Q: For a given binary tree, how many unique pre-order traversals are there?
+A: There is only one traversal through the tree because the tree does not change
+(no element of randomness).
+
+BUT for a given pre-order traversal:
+There are two * (number of single children in the deepest level) unique trees.
+This is because the left and right branches are processed right after one another
+so if the child was on the left branch OR the right branch, the pre-order traversal
+would be the same. This pattern could continue for as many single children there
+are in the deepest level of the tree.
+
+Q: For a given binary tree, how many unique in-order traversals are there?
+A: There is only one traversal through the tree because the tree does not change
+(no element of randomness).
+
+BUT for a given in-order traversal:
+There would only be a single unique in-order traversal, because every child has a parent,
+and because the parent is processed after the left child and the right child is always
+processed after the parent, only one order exists. In this case, the traversal would
+differ if the child was on the left vs. the right, but that doesn't apply to pre-order
+and post-order traversals.
+
+Q: For a given binary tree, how many unique post-order traversals are there?
+A: There is only one traversal through the tree because the tree does not change
+(no element of randomness).
+
+BUT for a given post-order traversal:
+*same as pre-order* There are two * (number of single children in the deepest level) unique trees.
+This is because the left and right branches are processed right after one another
+so if the child was on the left branch OR the right branch, the pre-order traversal
+would be the same. This pattern could continue for as many single children there
+are in the deepest level of the tree.
+
+Q: For a given traversal, how many unique trees could have produced it?
+A: This would depend on the traversal. As we explained above, different types of
+traversals can create a varying number of unique trees.
+
+Q: Given a pre-order traversal, what can you infer about its tree?
+A: You are able to find the root of the tree (first node in the traversal).
+
+Q: Given a post-order traversal, what can you infer about its tree?
+A: You are able to find the root of the tree (last node in the traversal).
+
+Q: What does "1-to-1" mean?
+A: Every element from one group of data links to only one element from another group
+of data. No element from either group of data has links connecting it to more
+than one element.
+
+Q: What does "onto" mean?
+A: "Onto" is when multiple elements from one group of data link to a singular element
+from the other group of data.
+
+================================================
+
+
+ALGO for reconstructing a binary tree
+------------------------------------------------
+givens:
+ * pre-order traversal
+ * in-order traversal
+ * post-order traversal
+
+note: we think this algorithm can work with just pre-order and in-order OR
+in-order and post-order but in those scenarios, it could produce more than one
+unique tree.
+
+procedure:
+ * the root of the tree is the first element of the pre-order traversal
+ * knowing the root of the tree, you can use the in-order traversal to distinguish
+ the left and right branches of the tree
+ * if there are any lone nodes on the left or right branch, you can draw them in
+ since you know there will be no children
+ * using the pre-order, you can identify the root of the left and right branches
+ because they will be the first node in that group.
+  ex: if ABCD are in the left branch and in the pre-order they appear as JDCAB, you
+  know that D will be the root of the left branch
+ * ignore the nodes that are not in the branch you are looking at and consider which
+ is the root of that branch. you can do this by using pre-order (first element) or
+ post-order (last element). then consider the two branches and repeat this pattern
+ of finding the root
+ * do this until the branch you are looking at consists of one element and then move back
+ up the tree to look at the next right most branch.
+================================================
