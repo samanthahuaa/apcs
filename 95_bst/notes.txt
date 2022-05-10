@@ -1,0 +1,23 @@
+TNPG: Hot Cake - Samantha Hua, Ariel Fuchs, Nada Hameed
+APCS
+HW95 -- Algorithm as Data Structure (Codifying a tree)
+2022-04-10
+time spent: 1hr.
+
+DISCO:
+ * The first inserted value is the root of the tree.
+ * It's easier to print the pre-order traversal.
+
+QCC:
+ * Why do in-order and post-order have to run the recursive method separately for
+ the left and right branches of the root? We think this has something to do with the
+ way both of those traversals go from the bottom to the top whereas pre-order goes
+ from the top to the bottom.
+ * Our code has a prerequisite where all new values inputted into the tree are not
+ equal to a value already on the tree.
+ * We never used the overloaded constructor for TreeNode. Could that have helped
+ us somewhere else?
+
+1. A perfect binary tree has 2^(D+1) - 1 nodes.
+2. At each level, a perfect binary tree has 2^d (d represents the depth of the level) nodes.
+3. Height of a complete binary tree w/ n nodes is h which equals log2(n).
