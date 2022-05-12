@@ -1,0 +1,67 @@
+TNPG: Hot Cake - Samantha Hua, Ariel Fuchs, Nada Hameed
+APCS
+HW97 -- Prune Your Tree
+2022-04-12
+time spent: 1.7hrs.
+
+--
+TNPG: Hot Cake - Samantha Hua, Ariel Fuchs, Nada Hameed
+APCS
+HW96 -- BSTs is the Perfect Place for Shade
+2022-04-11
+time spent: 1.2hrs.
+
+--
+TNPG: Hot Cake - Samantha Hua, Ariel Fuchs, Nada Hameed
+APCS
+HW95 -- Algorithm as Data Structure (Codifying a tree)
+2022-04-10
+time spent: 1hr.
+
+05/11
+DISCO:
+* We created a separate method to search for the parent of the target, because the parent
+points to the child, not the other way around, and we sometimes need the parent to point
+to the child's child (when removing the child).
+* There are three cases when it comes to removing a node from the tree so we just need to
+account for those three cases in our code because it always boils down to them
+
+QCC:
+ * We enjoyed the linked cartoon where the tree was recursively destroyed
+ * currently crying (not actually) because our code doesn't work and we don't know why
+
+--
+05/10
+DISCO:
+ * The height of the tree can be found by finding the heights of the min and max
+ value and comparing them to find the greater one. This is because we know the
+ structure of the tree will always have the min value the furthest on the left and
+ the max value the furthest on the right. One of the two values will always be
+ the height of the whole tree
+ * A helper method that is recursive helps tremendously
+
+QCC:
+ * We were not able to finish the numLeaves method because we could not find
+ a way to get it to sum up all the total number of leaves. Our algo relied on
+ going down the tree recursively so that we could reach the nodes where there are
+ no left or right pointers and add 1 to a sum.
+ * Were helper methods needed for search and height?
+--
+5/9
+DISCO:
+* The first inserted value is the root of the tree.
+* It's easier to print the pre-order traversal.
+
+QCC:
+ * Why do in-order and post-order have to run the recursive method separately for
+ the left and right branches of the root? We think this has something to do with the
+ way both of those traversals go from the bottom to the top whereas pre-order goes
+ from the top to the bottom.
+ * Our code has a prerequisite where all new values inputted into the tree are not
+ equal to a value already on the tree.
+ * We never used the overloaded constructor for TreeNode. Could that have helped
+ us somewhere else?
+
+1. A perfect binary tree has 2^(D+1) - 1 nodes.
+2. At each level, a perfect binary tree has 2^d (d represents the depth of the level) nodes.
+3. Height of a complete binary tree w/ n nodes is h which equals log2(n).
