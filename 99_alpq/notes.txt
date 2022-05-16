@@ -1,0 +1,25 @@
+Hot Cake: Samantha Hua, Ariel Fuchs, Nada Hameed
+APCS
+HW99 -- Some Are More Equal Than Others, Codified (Priority Queue)
+2022-05-16
+time spent: 1hr. (including class time)
+
+DISCO:
+ * peekMin() just finds the smallest int in the Priority Queue with a foreach
+ loop
+ * we use endIndexOfPriority to separate the priority portion of the queue from
+ the non-prioritized part, and it marks the last index of the priority portion,
+ so that it is easier to add to the priority part of the queue while still maintaining
+ order within that.
+
+QCC:
+ * We had a conversation with Team Pom Pom on Friday about the way they were
+ keeping track of the priority values. They responded with an explanation about
+ how each of their values has a priority value and that there wasn't a binary
+ category of priority or not. We had interpreted the priorities to be a set of
+ values completing a particular requirement. This shaped the way we structured
+ our ArrayList (we put the priority values in the beginning and had an inst var to
+ keep track of the barrier between priority and non-priority). We're not sure if
+ this is the right interpretation of the class design.
+ * Is there a more efficient way to execute peekMin() if we changed the structure
+ of our class?
