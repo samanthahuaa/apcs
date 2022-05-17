@@ -1,0 +1,12 @@
+Our removal algo is based on the idea that the left node will always be less than
+the right node.
+
+so our algo is:
+
+1. if there are no children --> remove leaf by changing pointer of the parent
+2. if there is one child --> promote the child
+3. if there are two children --> promote the left child
+
+we were confused on how to remove nodes that have children and what to do with the
+children. one idea that was suggested was to repeat the algo on the children similar
+to how we repeated the algo in bst

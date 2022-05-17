@@ -1,0 +1,16 @@
+Hot Cake: Samantha Hua, Ariel Fuchs, Nada Hameed
+APCS
+HW101 -- Heap o'Trouble
+2022-05-17
+time spent: .5hr
+
+DISCO:
+ * Within the tree we have to have a rule about the difference between the left
+ and right branches. it makes removing easier and it also makes the tree more
+ efficient because it minimizes the tree height which helps with the searching
+ * Heaps are more efficient for inserting and sorting compared to sorted array
+ lists
+
+QCC:
+ * hypothetically, there would be very few differences between the maxheap and
+ the minheap
