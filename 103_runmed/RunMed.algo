@@ -1,0 +1,11 @@
+1. have two heaps: a max heap (for smol values) and a min heap (for the BIG vals)
+2. set the first inputted value as the root of the max heap
+3. add the values with the condition that if they are greater than the root of
+the max heap, they belong in the min heap
+4. balance the trees by comparing their heights and ensuring the heights have a
+difference of <2
+    if the heaps are unbalanced, remove the root of the larger heap and add it to
+    the other
+    keep doing this until the heaps are balanced
+5. take the root of the heap that is larger (if they are the same heights, take the
+average of the roots (use int division))

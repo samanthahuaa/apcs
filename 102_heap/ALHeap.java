@@ -109,7 +109,7 @@ public class ALHeap {
 
     // indexes of vals we want to compare
     int leaf = 0;
-    while (minChildPos(leaf) != leaf) {
+    while (minChildPos(leaf) > -1) {
       swap(minChildPos(leaf),leaf);
       leaf = minChildPos(leaf);
       // System.out.println(minChildPos(leaf));
