@@ -1,0 +1,13 @@
+Our insertion algo should follow these rules:
+ * add to the left if you can
+ * fill the level if you can
+ * left should be less than right
+ * of course maintain the heap order where the min is at the top
+
+1. is the val less than the root --> it becomes the root
+2. is there left subtree?
+  yes --> is the newVal less than the left subtree val?
+    yes --> add to the left subtree if there is no tree. if there is repeat the
+    comparison of the vals.
+    no --> add to the right. check if there is a right subtree + compare the vals
+  no --> becomes the left subtree
