@@ -28,60 +28,62 @@ public class Heapsort
 
     //STEP 2: repeatedly pull from heap until empty
     //(Sorted region will grow from R to L)
-    for( int lastLeaf = ; ;  ) {
+    for( int lastLeaf = (data.length - 1) ; lastLeaf > 0; lastLeaf-- ) {
       //set aside root val
       int tmp = data[0];
 
       //swap last leaf (rightmost on bottom level) into root pos
+      data[0] = data[lastLeaf];
+
 
       //walk now-out-of-place root node down the tree...
-      int pos =
-      int minChildPos;
+      int pos = 0;
       int maxChildPos;
 
-      while( . ) {
+      while( pos <= lastLeaf) {
+        maxChildPos = maxChildPos(pos, lastLeaf, data);
 
         //choose child w/ max value, or check for child
 
         //if no children, then i've walked far enough
-        if ( maxChildPos == -1 )
+        if ( maxChildPos == -1 ) {
           break;
+        }
         //if i am greater than my greatest child, i've walked far enough
-        else if (  )
+        else if (data[maxChildPos] <= data[pos]) {
           break;
-        //if i am > least child, swap with that child
+        }
+        //if i am < greatest child, swap with that child
         else {
-
+          swap(maxChildPos, pos, data);
+          pos = maxChildPos;
         }
       }
 
       //overwrite last leaf with old root val
-
-    }
-
+      data[lastLeaf] = tmp;
+    } //end of for loop
 
     //STEP teh LAST: return modified array
     return data;
 
-  }//end sort() -- O(?)
-
-
+  }//end sort() -- O(n^2) because there is a while loop inside a for loop
 
   private void minHeapify( int[] a )
   {
 
     for( int i=1; i<a.length; i++ ) {
       //add a[i] as leaf
-      int addValPos = _heap.size() - 1; //val to add is next non-heap element
+      int addValPos = i; //val to add is next non-heap element
 
       //now must percolate up
       while(addValPos > 0 ) { //potentially swap until reach root
-
+        int addVal = a[addValPos];
         //pinpoint parent
         int parentPos = (addValPos-1) / 2;
 
-        if (addVal.compareTo(_heap.get(parentPos)) < 0) {
-          swap(addValPos,parentPos);
+        if (addVal < a[parentPos]) {
+          swap(addValPos,parentPos, a);
           addValPos = parentPos;
         }
         else
@@ -96,16 +98,17 @@ public class Heapsort
   {
     for( int i=1; i<a.length; i++ ) {
       //add a[i] as leaf
-      int addValPos = _heap.size() - 1; //val to add is next non-heap element
+      int addValPos = i; //val to add is next non-heap element
 
       //now must percolate up
       while(addValPos > 0 ) { //potentially swap until reach root
+        int addVal = a[addValPos];
 
         //pinpoint parent
         int parentPos = (addValPos-1) / 2;
 
-        if (addVal.compareTo(_heap.get(parentPos)) > 0) {
-          swap(addValPos,parentPos);
+        if (addVal > a[parentPos]) {
+          swap(addValPos,parentPos, a);
           addValPos = parentPos;
         }
         else
@@ -131,7 +134,7 @@ public class Heapsort
     else if ( rc >= last)
       retVal = lc;
     //have 2 children, so compare to find least
-    else if (_heap.get(lc).compareTo(_heap.get(rc)) < 0 )
+    else if (a[lc] < a[rc])
       retVal = lc;
     else
       retVal = rc;
@@ -154,7 +157,7 @@ public class Heapsort
     else if ( rc >= last )
       retVal = lc;
     //have 2 children, so compare to find greatest
-    else if ( _heap.get(lc).compareTo(_heap.get(rc)) > 0 )
+    else if ( a[lc] > a[rc])
       retVal = lc;
     else
       retVal = rc;
@@ -206,7 +209,7 @@ public class Heapsort
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
     int[] a = buildArray( 10, 10 );
 
     printArr(a);
@@ -216,6 +219,7 @@ public class Heapsort
     h.sort(a);
 
     printArr(a);
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
   }//end main()
